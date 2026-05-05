@@ -1,1128 +1,1773 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Datamend - Pakistan's leading AI, Data Engineering & Automation learning platform. Master AI Automation, Agentic AI, Generative AI, Power BI, Data Engineering and Big Data."/>
-<meta name="keywords" content="AI Automation, Data Engineering, Power BI, Agentic AI, Generative AI, Big Data, Talend, Pakistan, Online Courses"/>
-<title>Datamend — Expertise that Deliver</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DataMend – Pakistan's #1 AI & Data Learning Platform. Master AI Automation, Agentic AI, Generative AI, Data Engineering & Analytics. Industry-ready, practical courses taught by 12+ year veterans.">
+<meta name="keywords" content="AI Courses Pakistan, Data Science Training, AI Automation, Agentic AI, Generative AI, Data Engineering, Power BI, Big Data, Talend, Automation Skills, Machine Learning Courses">
+<meta name="robots" content="index, follow">
+<meta name="author" content="DataMend">
+<title>DataMend – AI & Data Courses | Expertise that Delivers</title>
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://datamend.com/">
+<meta property="og:title" content="DataMend – AI & Data Courses | Expertise that Delivers">
+<meta property="og:description" content="Master AI Automation, Agentic AI, Generative AI, Data Engineering & Analytics. Pakistan's leading AI & Data learning platform with 1000+ students.">
+<meta property="og:image" content="https://datamend.com/og-image.jpg">
+<meta property="og:site_name" content="DataMend">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DataMend – AI & Data Courses | Expertise that Delivers">
+<meta name="twitter:description" content="Master AI Automation, Agentic AI, Data Engineering & Analytics. Pakistan's #1 AI learning platform.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "DataMend",
+  "description": "Pakistan's leading AI & Data learning platform.",
+  "url": "https://datamend.com",
+  "logo": "https://datamend.com/logo.png",
+  "address": {"@type": "PostalAddress", "addressCountry": "PK"}
+}
+</script>
+
 <style>
+/* ═══════════════════════════════════════
+   CSS VARIABLES & RESET
+═══════════════════════════════════════ */
+:root {
+  --blue-deep:   #0a3d8f;
+  --blue:        #1a6ed8;
+  --blue-mid:    #2d84f0;
+  --blue-light:  #e8f2ff;
+  --blue-soft:   #dbeafe;
+  --cyan:        #06b6d4;
+  --white:       #ffffff;
+  --gray-50:     #f8fafc;
+  --gray-100:    #f1f5f9;
+  --gray-200:    #e2e8f0;
+  --gray-300:    #cbd5e1;
+  --gray-400:    #94a3b8;
+  --gray-500:    #64748b;
+  --gray-600:    #475569;
+  --gray-700:    #334155;
+  --gray-800:    #1e293b;
+  --gray-900:    #0f172a;
+  --green:       #10b981;
+  --amber:       #f59e0b;
+  --purple:      #7c3aed;
+  --orange:      #ea580c;
+  --nav-height:  80px;
+  --radius-sm:   8px;
+  --radius:      14px;
+  --radius-lg:   22px;
+  --shadow-xs:   0 1px 3px rgba(0,0,0,.07);
+  --shadow-sm:   0 2px 8px rgba(26,110,216,.09);
+  --shadow-md:   0 8px 28px rgba(26,110,216,.13);
+  --shadow-lg:   0 20px 56px rgba(10,61,143,.16);
+  --ease:        cubic-bezier(.4,0,.2,1);
+  --t:           .28s;
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --white:#ffffff;--blue-50:#eff6ff;--blue-100:#dbeafe;--blue-200:#bfdbfe;
-  --blue-400:#60a5fa;--blue-500:#3b82f6;--blue-600:#2563eb;--blue-700:#1d4ed8;
-  --blue-900:#1e3a8a;--gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;
-  --gray-300:#cbd5e1;--gray-400:#94a3b8;--gray-500:#64748b;--gray-600:#475569;
-  --gray-700:#334155;--gray-800:#1e293b;--gray-900:#0f172a;
-  --accent:#0ea5e9;--accent-light:#38bdf8;
-  --shadow-sm:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
-  --shadow-md:0 4px 16px rgba(0,0,0,.08);--shadow-lg:0 12px 40px rgba(0,0,0,.10);
-  --shadow-xl:0 24px 60px rgba(0,0,0,.12);--radius:16px;--radius-sm:8px;
-  --font-display:'Sora',sans-serif;--font-body:'DM Sans',sans-serif;
-}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-body);background:var(--white);color:var(--gray-800);line-height:1.6;overflow-x:hidden}
-h1,h2,h3,h4{font-family:var(--font-display)}
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-track{background:var(--gray-100)}
-::-webkit-scrollbar-thumb{background:var(--blue-400);border-radius:99px}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',sans-serif;background:var(--gray-50);color:var(--gray-800);line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer}
 
-/* ANIMATIONS */
-@keyframes fadeInUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeInLeft{from{opacity:0;transform:translateX(-32px)}to{opacity:1;transform:translateX(0)}}
-@keyframes fadeInRight{from{opacity:0;transform:translateX(32px)}to{opacity:1;transform:translateX(0)}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-@keyframes pulseRing{0%{transform:scale(.95);box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{transform:scale(1);box-shadow:0 0 0 14px rgba(37,211,102,0)}100%{transform:scale(.95);box-shadow:0 0 0 0 rgba(37,211,102,0)}}
-@keyframes gradShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-@keyframes spin{to{transform:rotate(360deg)}}
+/* ═══════════════════════════════════════
+   PAGE SYSTEM
+═══════════════════════════════════════ */
+.page{display:none;min-height:100vh;animation:pageFadeIn .4s var(--ease) both}
+.page.active{display:block}
+@keyframes pageFadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
-.fade-in{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-.fade-in.visible{opacity:1;transform:translateY(0)}
-.fade-left{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s ease}
-.fade-left.visible{opacity:1;transform:translateX(0)}
-.fade-right{opacity:0;transform:translateX(28px);transition:opacity .7s ease,transform .7s ease}
-.fade-right.visible{opacity:1;transform:translateX(0)}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
-.d4{transition-delay:.4s}.d5{transition-delay:.5s}
-
-/* WHATSAPP FAB */
-.wa-fab{
-  position:fixed;bottom:28px;right:28px;z-index:9999;
-  width:58px;height:58px;border-radius:50%;
-  background:#25D366;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 20px rgba(37,211,102,.5);text-decoration:none;
-  animation:pulseRing 2.5s cubic-bezier(.455,.03,.515,.955) infinite;
-  transition:transform .2s;
-}
-.wa-fab:hover{transform:scale(1.12)}
-.wa-fab svg{width:28px;height:28px;fill:white}
-
-/* NAVBAR */
-.navbar{
+/* ═══════════════════════════════════════
+   NAVBAR  ← FIXED STRUCTURE
+═══════════════════════════════════════ */
+nav{
   position:fixed;top:0;left:0;right:0;z-index:1000;
-  background:rgba(255,255,255,.92);backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--gray-200);transition:box-shadow .3s;
+  height:var(--nav-height);
+  background-color:#ffffff;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+  display:flex;align-items:center;
+  transition:box-shadow 0.3s ease;
 }
-.navbar.scrolled{box-shadow:var(--shadow-md)}
+nav.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.10)}
+
 .nav-inner{
-  max-width:1200px;margin:0 auto;padding:0 24px;
-  display:flex;align-items:center;justify-content:space-between;height:70px;
+  max-width:1260px;margin:0 auto;width:100%;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 32px;
 }
-.nav-logo{
-  font-family:var(--font-display);font-size:1.5rem;font-weight:800;
-  background:linear-gradient(135deg,var(--blue-600),var(--accent));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  cursor:pointer;letter-spacing:-.5px;text-decoration:none;
-}
-.nav-links{display:flex;gap:4px;list-style:none;align-items:center}
-.nav-links a{
-  font-size:.9rem;font-weight:500;color:var(--gray-600);
-  padding:8px 14px;border-radius:8px;cursor:pointer;
-  transition:color .2s,background .2s;text-decoration:none;display:block;
-}
-.nav-links a:hover,.nav-links a.active{color:var(--blue-600);background:var(--blue-50)}
-.nav-cta{background:linear-gradient(135deg,var(--blue-600),var(--accent))!important;color:white!important;border-radius:8px!important}
-.nav-cta:hover{opacity:.88;transform:translateY(-1px)}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-.hamburger span{width:24px;height:2px;background:var(--gray-700);border-radius:2px;display:block;transition:all .3s}
 
-/* BUTTONS */
-.btn-primary{
-  background:linear-gradient(135deg,var(--blue-600),var(--accent));
-  color:white;border:none;padding:14px 32px;border-radius:12px;
-  font-family:var(--font-display);font-size:.95rem;font-weight:600;cursor:pointer;
-  transition:transform .2s,box-shadow .2s;text-decoration:none;
-  display:inline-flex;align-items:center;gap:8px;
+/* ── Logo ── */
+.logo{
+  display:flex;align-items:center;gap:4px;
+  cursor:pointer;user-select:none;flex-shrink:0;
 }
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,99,235,.35)}
-.btn-secondary{
-  background:white;color:var(--blue-600);border:2px solid var(--blue-200);
-  padding:12px 28px;border-radius:12px;font-family:var(--font-display);
-  font-size:.95rem;font-weight:600;cursor:pointer;transition:all .2s;
-  text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+.logo img{
+  height:48px;width:auto;
+  transition:opacity 0.3s ease;
 }
-.btn-secondary:hover{background:var(--blue-50);border-color:var(--blue-400);transform:translateY(-2px)}
-.btn-white{
-  background:white;color:var(--blue-700);padding:14px 32px;border-radius:12px;
-  font-family:var(--font-display);font-weight:700;border:none;cursor:pointer;
-  font-size:.95rem;transition:all .2s;display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+.logo:hover img{opacity:.88}
+.logo-name{
+  font-family:'Sora',sans-serif;
+  font-size:21px;font-weight:800;
+  letter-spacing:-0.3px;
+  white-space:nowrap;
+  line-height:1;
 }
-.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.logo-name .data{color:#0a7c8c;}
+.logo-name .mend{color:#1a2e3b;}
 
-/* PAGES */
-.page{display:none}.page.active{display:block}
+/* Nav links */
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links>li{position:relative}
+.nav-btn{
+  background:none;border:none;
+  font-family:'Sora','Inter',sans-serif;
+  font-size:14.5px;font-weight:600;
+  color:#1a2e3b;
+  letter-spacing:0.3px;
+  padding:8px 16px;border-radius:8px;
+  cursor:pointer;
+  display:flex;align-items:center;gap:6px;
+  position:relative;
+  transition:all 0.25s ease;
+}
+.nav-btn::after{
+  content:'';position:absolute;
+  left:16px;bottom:4px;
+  width:0%;height:2px;
+  background-color:#0a7c8c;
+  border-radius:2px;
+  transition:width 0.25s ease;
+}
+.nav-btn:hover{
+  color:#0a7c8c;
+  background:rgba(10,124,140,.07);
+  transform:translateY(-1px);
+}
+.nav-btn:hover::after{width:calc(100% - 32px)}
+.nav-btn.active{color:#0a7c8c;font-weight:700;background:rgba(10,124,140,.07)}
+.nav-btn.active::after{width:calc(100% - 32px);background-color:#0a7c8c}
+.nav-btn .chevron{font-size:.6rem;transition:transform 0.3s ease}
+.nav-links>li:hover .chevron{transform:rotate(180deg)}
 
-/* SECTION */
-.section{padding:96px 24px}
-.section-inner{max-width:1200px;margin:0 auto}
+/* Dropdown */
+.dropdown{
+  position:absolute;top:calc(100% + 12px);left:50%;
+  transform:translateX(-50%) translateY(-8px);
+  background:#fff;border-radius:14px;
+  box-shadow:0 20px 56px rgba(10,61,143,.15);
+  padding:10px;min-width:280px;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity 0.3s ease,transform 0.3s ease,visibility 0.3s;
+  border:1px solid #e5e7eb;
+}
+.nav-links>li:hover .dropdown{opacity:1;visibility:visible;pointer-events:all;transform:translateX(-50%) translateY(0)}
+.dd-link{
+  display:flex;align-items:center;gap:12px;
+  padding:10px 13px;border-radius:10px;
+  color:#334155;font-size:.88rem;
+  cursor:pointer;transition:background 0.28s ease;
+}
+.dd-link:hover{background:#eff6ff}
+.dd-ico{
+  width:36px;height:36px;border-radius:9px;
+  background:#dbeafe;color:#2563EB;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.95rem;flex-shrink:0;transition:background 0.28s,color 0.28s;
+}
+.dd-link:hover .dd-ico{background:#2563EB;color:#fff}
+
+/* CTA button */
+.nav-cta{
+  background:#0a7c8c!important;color:#fff!important;
+  font-weight:600!important;padding:10px 22px!important;
+  box-shadow:0 2px 12px rgba(10,124,140,.3);
+  border-radius:8px!important;margin-left:8px;
+  transition:background 0.25s ease,transform 0.25s ease,box-shadow 0.25s ease!important;
+}
+.nav-cta::after{display:none}
+.nav-cta:hover{background:#1a2e3b!important;transform:translateY(-2px);box-shadow:0 6px 20px rgba(10,124,140,.4)!important}
+
+/* Hamburger */
+.hamburger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;padding:8px;cursor:pointer;
+}
+.hamburger span{display:block;width:24px;height:2px;background:#2563EB;border-radius:2px;transition:all 0.3s ease}
+
+/* Mobile nav */
+.mobile-nav{
+  display:none;position:fixed;top:var(--nav-height);left:0;right:0;
+  background:#ffffff;z-index:999;padding:12px 20px 24px;
+  flex-direction:column;gap:4px;
+  box-shadow:0 8px 28px rgba(0,0,0,.1);
+  border-top:1px solid #e5e7eb;
+  animation:slideDown .25s ease;
+}
+@keyframes slideDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.mobile-nav.open{display:flex}
+.mobile-nav button{
+  background:none;border:none;color:#2563EB;
+  font-family:'Inter','DM Sans',sans-serif;font-size:.97rem;font-weight:500;
+  padding:13px 16px;border-radius:10px;text-align:left;
+  transition:background 0.3s ease,color 0.3s ease;cursor:pointer;
+}
+.mobile-nav button:hover{background:rgba(37,99,235,.07);color:#1E3A8A}
+
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-inner{padding:0 20px}
+}
+
+/* ═══════════════════════════════════════
+   SHARED SECTION STYLES
+═══════════════════════════════════════ */
+section{padding:88px 28px}
+.container{max-width:1200px;margin:0 auto}
 .section-badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--blue-50);color:var(--blue-600);
-  padding:6px 16px;border-radius:99px;font-size:.8rem;font-weight:600;
-  letter-spacing:.04em;text-transform:uppercase;margin-bottom:20px;
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--blue-soft);color:var(--blue);
+  border-radius:50px;padding:5px 14px;
+  font-size:.78rem;font-weight:700;letter-spacing:.4px;
+  margin-bottom:14px;
 }
-.section-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:var(--gray-900);line-height:1.2;margin-bottom:16px;letter-spacing:-.5px}
-.section-sub{font-size:1.1rem;color:var(--gray-500);max-width:600px;line-height:1.7}
-.gradient-text{background:linear-gradient(135deg,var(--blue-600),var(--accent-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.section-title{
+  font-family:'Sora',sans-serif;
+  font-size:clamp(1.65rem,3vw,2.6rem);
+  font-weight:800;color:var(--gray-800);
+  line-height:1.18;margin-bottom:16px;
+}
+.section-sub{
+  font-size:1.02rem;color:var(--gray-500);
+  max-width:540px;line-height:1.75;
+}
 .text-center{text-align:center}
-.mx-auto{margin-left:auto;margin-right:auto}
+.text-center .section-sub{margin:0 auto}
 
-/* HERO */
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:'Sora',sans-serif;font-weight:700;
+  font-size:.93rem;border:none;cursor:pointer;
+  border-radius:var(--radius-sm);padding:13px 26px;
+  transition:all var(--t) var(--ease);
+}
+.btn-blue{background:var(--blue);color:#fff;box-shadow:0 4px 14px rgba(26,110,216,.35)}
+.btn-blue:hover{background:var(--blue-deep);transform:translateY(-2px);box-shadow:0 8px 22px rgba(26,110,216,.4)}
+.btn-white{background:#fff;color:var(--blue);box-shadow:0 4px 14px rgba(0,0,0,.14)}
+.btn-white:hover{background:var(--blue-soft);transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.4)}
+.btn-ghost:hover{background:rgba(255,255,255,.22);border-color:#fff}
+.btn-sm{padding:9px 18px;font-size:.84rem}
+
+/* Fade in animations */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.fade-up.in{opacity:1;transform:translateY(0)}
+.fade-up.d1{transition-delay:.05s}
+.fade-up.d2{transition-delay:.12s}
+.fade-up.d3{transition-delay:.19s}
+.fade-up.d4{transition-delay:.26s}
+.fade-up.d5{transition-delay:.33s}
+
+/* ═══════════════════════════════════════
+   HERO
+═══════════════════════════════════════ */
 .hero{
-  min-height:100vh;display:flex;align-items:center;
-  position:relative;overflow:hidden;
-  background:linear-gradient(160deg,#eff6ff 0%,#f8fafc 40%,#e0f2fe 100%);
-  padding-top:70px;
+  min-height:100vh;padding-top:var(--nav-height);
+  background:linear-gradient(145deg,#0e3d8a 0%,#1a6ed8 42%,#0891b2 100%);
+  display:flex;align-items:center;position:relative;overflow:hidden;
 }
-.hero-mesh{
-  position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(ellipse 60% 50% at 80% 20%,rgba(59,130,246,.12) 0%,transparent 70%),
-             radial-gradient(ellipse 40% 40% at 10% 80%,rgba(14,165,233,.10) 0%,transparent 70%);
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.035'%3E%3Cpath d='M0 0h40v40H0zm40 40h40v40H40z'/%3E%3C/g%3E%3C/svg%3E");
 }
-.hero-dots{
-  position:absolute;inset:0;pointer-events:none;
-  background-image:radial-gradient(circle,rgba(59,130,246,.12) 1px,transparent 1px);
-  background-size:32px 32px;
-}
+.hero-blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.09;animation:blobDrift 8s ease-in-out infinite alternate}
+.blob-a{width:650px;height:650px;background:#7dd3fc;top:-180px;right:-120px;animation-delay:0s}
+.blob-b{width:500px;height:500px;background:#a5f3fc;bottom:-150px;left:-100px;animation-delay:-4s}
+.blob-c{width:350px;height:350px;background:#c4b5fd;top:30%;left:30%;animation-delay:-2s}
+@keyframes blobDrift{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.12) translate(20px,-20px)}}
+
 .hero-inner{
-  max-width:1200px;margin:0 auto;padding:80px 24px;
-  display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+  max-width:1200px;margin:0 auto;width:100%;
+  padding:80px 28px;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:64px;align-items:center;
   position:relative;z-index:1;
 }
-.hero-title{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;line-height:1.1;color:var(--gray-900);letter-spacing:-1px;margin-bottom:24px}
-.hero-sub{font-size:1.15rem;color:var(--gray-500);line-height:1.75;margin-bottom:40px}
-.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
-.hero-visual{display:flex;justify-content:center;align-items:center}
-.card-stack{position:relative;width:340px;height:340px}
-.hero-blob{
-  position:absolute;width:280px;height:280px;top:30px;left:30px;
-  border-radius:50%;background:linear-gradient(135deg,var(--blue-100),var(--blue-200));
-  animation:float 5s ease-in-out infinite;
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.26);
+  color:#fff;border-radius:50px;padding:6px 16px;
+  font-size:.8rem;font-weight:700;letter-spacing:.5px;
+  margin-bottom:22px;backdrop-filter:blur(8px);
+  animation:heroSubIn .7s var(--ease) both;
 }
-.stat-card{
-  position:absolute;background:white;border-radius:16px;padding:16px 22px;
-  box-shadow:var(--shadow-xl);border:1px solid var(--gray-200);
+.hero-eyebrow i{color:#fbbf24}
+.hero-title{
+  font-family:'Sora',sans-serif;
+  font-size:clamp(2rem,4.2vw,3.6rem);
+  font-weight:800;color:#fff;
+  line-height:1.12;margin-bottom:20px;
+  animation:heroTitleIn .8s .1s var(--ease) both;
 }
-.stat-card .num{font-family:var(--font-display);font-size:1.4rem;font-weight:800;color:var(--blue-600)}
-.stat-card .lbl{font-size:.78rem;color:var(--gray-500)}
-.hero-emoji{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:4rem}
-
-/* GRID */
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.grid-auto{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-
-/* CARD */
-.card{
-  background:white;border:1px solid var(--gray-200);border-radius:var(--radius);
-  padding:32px;box-shadow:var(--shadow-sm);
-  transition:transform .3s,box-shadow .3s,border-color .3s;
+.hero-title em{color:#93c5fd;font-style:normal}
+@keyframes heroTitleIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.hero-sub{
+  font-size:1.05rem;color:rgba(255,255,255,.82);
+  margin-bottom:36px;line-height:1.75;max-width:520px;
+  animation:heroSubIn .8s .2s var(--ease) both;
 }
-.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-xl);border-color:var(--blue-200)}
+@keyframes heroSubIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;animation:heroSubIn .8s .3s var(--ease) both}
+.hero-stats{display:flex;gap:28px;margin-top:40px;animation:heroSubIn .8s .4s var(--ease) both}
+.h-stat strong{font-family:'Sora',sans-serif;font-size:1.7rem;font-weight:800;color:#fff;display:block}
+.h-stat span{font-size:.78rem;color:rgba(255,255,255,.65)}
+.hero-visual{position:relative;animation:heroVisualIn .9s .25s var(--ease) both}
+@keyframes heroVisualIn{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+.hero-card{
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.22);
+  backdrop-filter:blur(18px);
+  border-radius:var(--radius-lg);padding:32px;
+}
+.hero-card-label{font-size:.75rem;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:.5px;margin-bottom:18px;text-transform:uppercase}
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px}
+.skill-tile{
+  border-radius:12px;padding:14px 10px;
+  display:flex;flex-direction:column;align-items:center;
+  gap:6px;font-size:.73rem;font-weight:600;color:#fff;
+  cursor:default;transition:transform var(--t) var(--ease);
+}
+.skill-tile:hover{transform:scale(1.06)}
+.skill-tile i{font-size:1.45rem}
+.st-ai{background:rgba(59,130,246,.4)}
+.st-gen{background:rgba(16,185,129,.4)}
+.st-bi{background:rgba(245,158,11,.4)}
+.st-de{background:rgba(139,92,246,.4)}
+.st-bd{background:rgba(239,68,68,.4)}
+.st-tl{background:rgba(6,182,212,.4)}
+.hero-divider{height:1px;background:rgba(255,255,255,.15);margin-bottom:20px}
+.hero-team-row{display:flex;align-items:center;gap:10px}
+.team-ava{
+  width:34px;height:34px;border-radius:50%;
+  background:rgba(255,255,255,.25);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:.82rem;color:#fff;
+  border:2px solid rgba(255,255,255,.4);
+  margin-left:-8px;
+}
+.team-ava:first-child{margin-left:0}
+.hero-team-text{font-size:.78rem;color:rgba(255,255,255,.75);margin-left:6px}
+.pulse-dot{position:absolute;top:-14px;right:-14px;width:52px;height:52px}
+.pulse-dot::before,.pulse-dot::after{
+  content:'';position:absolute;inset:0;
+  border:2px solid rgba(255,255,255,.45);
+  border-radius:50%;animation:ripple 2.2s ease infinite;
+}
+.pulse-dot::after{animation-delay:1.1s}
+@keyframes ripple{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.8);opacity:0}}
 
-/* COURSE CARD */
-.course-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:20px}
-.course-tag{display:inline-block;font-size:.75rem;font-weight:600;padding:4px 12px;border-radius:99px;background:var(--blue-50);color:var(--blue-600);margin-bottom:12px}
-.course-title{font-size:1.1rem;font-weight:700;color:var(--gray-900);margin-bottom:8px}
-.course-desc{font-size:.9rem;color:var(--gray-500);line-height:1.6;margin-bottom:16px}
-.course-meta{display:flex;gap:14px;margin-bottom:20px;flex-wrap:wrap}
-.course-meta span{font-size:.82rem;color:var(--gray-500)}
-.course-cta{font-size:.88rem;font-weight:600;color:var(--blue-600);background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:6px;padding:0;transition:gap .2s}
-.course-cta:hover{gap:12px}
-
-/* WHY CARD */
-.why-card{display:flex;gap:20px;align-items:flex-start;padding:24px;border-radius:var(--radius);background:white;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);transition:all .3s;margin-bottom:16px}
-.why-card:hover{transform:translateX(6px);border-color:var(--blue-200);box-shadow:var(--shadow-md)}
-.why-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
-
-
-
-/* CTA BAND */
-.cta-band{background:linear-gradient(135deg,var(--blue-700),var(--accent));padding:80px 24px;text-align:center}
-.cta-band h2{color:white;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-bottom:16px}
-.cta-band p{color:rgba(255,255,255,.8);margin-bottom:32px;font-size:1.1rem}
-
-/* BLOG */
-.blog-emoji{width:100%;height:180px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;margin-bottom:20px;background:linear-gradient(135deg,var(--blue-50),var(--blue-100))}
-.blog-cat{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue-600);margin-bottom:8px}
-.blog-title{font-size:1.05rem;font-weight:700;color:var(--gray-900);margin-bottom:10px;line-height:1.4}
-.blog-excerpt{font-size:.9rem;color:var(--gray-500);line-height:1.65;margin-bottom:16px}
-.blog-meta{font-size:.8rem;color:var(--gray-400);display:flex;gap:12px;flex-wrap:wrap}
-
-/* BLOG DETAIL */
-#blog-detail-content{max-width:780px;margin:0 auto;padding:32px 24px 80px}
-#blog-detail-content h1{font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800;color:var(--gray-900);margin-bottom:16px;line-height:1.2}
-#blog-detail-content h2{font-size:1.35rem;font-weight:700;color:var(--gray-800);margin:32px 0 12px}
-#blog-detail-content h3{font-size:1.1rem;font-weight:600;color:var(--gray-700);margin:24px 0 8px}
-#blog-detail-content p{color:var(--gray-600);line-height:1.8;margin-bottom:16px}
-#blog-detail-content ul,#blog-detail-content ol{padding-left:24px;margin-bottom:16px}
-#blog-detail-content li{color:var(--gray-600);line-height:1.75;margin-bottom:6px}
-#blog-detail-content table{width:100%;border-collapse:collapse;margin-bottom:24px;font-size:.9rem}
-#blog-detail-content th{background:var(--blue-600);color:white;padding:10px 14px;text-align:left}
-#blog-detail-content td{padding:10px 14px;border-bottom:1px solid var(--gray-200);color:var(--gray-600)}
-#blog-detail-content tr:nth-child(even) td{background:var(--gray-50)}
-.faq-item{background:var(--gray-50);border-radius:12px;padding:18px;margin-bottom:12px;border-left:3px solid var(--blue-400)}
-.faq-item strong{color:var(--gray-800)}
-.back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--blue-600);font-weight:600;font-size:.9rem;background:var(--blue-50);border:none;cursor:pointer;padding:10px 18px;border-radius:8px;transition:background .2s;margin-bottom:32px;font-family:var(--font-body)}
-.back-btn:hover{background:var(--blue-100)}
-
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.contact-info-item{display:flex;align-items:flex-start;gap:16px;margin-bottom:28px}
-.contact-icon-box{width:44px;height:44px;border-radius:10px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
-.form-group{margin-bottom:20px}
-.form-group label{display:block;font-size:.88rem;font-weight:600;color:var(--gray-700);margin-bottom:8px}
-.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 16px;border:1.5px solid var(--gray-200);border-radius:10px;font-family:var(--font-body);font-size:.95rem;color:var(--gray-800);outline:none;transition:border-color .2s;background:white}
-.form-group input:focus,.form-group textarea:focus{border-color:var(--blue-400)}
-.form-group textarea{resize:vertical;min-height:120px}
-.map-placeholder{width:100%;height:200px;border-radius:16px;background:linear-gradient(135deg,var(--blue-50),var(--blue-100));display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;margin-top:24px;border:1px solid var(--blue-200)}
-.success-box{text-align:center;padding:48px 24px}
-
-/* COURSE DETAIL */
-.course-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.outcome-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;font-size:.92rem;color:var(--gray-700)}
-.check-icon{color:var(--blue-500);font-size:1rem;flex-shrink:0;margin-top:2px}
-
-/* FOOTER */
-footer{background:var(--gray-900);color:var(--gray-400);padding:64px 24px 32px}
-.footer-inner{max-width:1200px;margin:0 auto}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
-.footer-logo{font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:white;margin-bottom:12px}
-.footer-desc{font-size:.88rem;line-height:1.7;margin-bottom:20px}
-.footer-socials{display:flex;gap:10px}
-.social-btn{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:var(--gray-400);cursor:pointer;transition:all .2s;font-size:.85rem;text-decoration:none}
-.social-btn:hover{background:var(--blue-600);color:white;border-color:transparent}
-.footer-col h4{color:white;font-size:.95rem;font-weight:700;margin-bottom:16px}
-.footer-col ul{list-style:none}
-.footer-col ul li{margin-bottom:10px}
-.footer-col ul li a,.footer-col ul li button{background:none;border:none;color:var(--gray-400);font-size:.88rem;cursor:pointer;transition:color .2s;padding:0;text-decoration:none;font-family:var(--font-body)}
-.footer-col ul li a:hover,.footer-col ul li button:hover{color:var(--blue-400)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:.82rem;flex-wrap:wrap;gap:8px}
-.chip{display:inline-block;padding:4px 12px;border-radius:99px;font-size:.78rem;font-weight:600;background:var(--blue-50);color:var(--blue-600);margin:3px}
-
-/* ABOUT SPLIT */
+/* ── ABOUT ── */
+.about-sec{background:var(--white)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.mini-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
-.mini-card{padding:16px;background:white;border-radius:12px;border:1px solid var(--gray-200)}
-.mini-card .ic{font-size:1.4rem;margin-bottom:8px}
-.mini-card .tit{font-weight:700;font-size:.9rem;color:var(--gray-800);margin-bottom:3px}
-.mini-card .sub{font-size:.82rem;color:var(--gray-500)}
-.stat-row{display:flex;align-items:center;gap:20px;padding:18px 24px;background:white;border-radius:14px;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);margin-bottom:14px}
-.stat-num{font-size:1.7rem;font-weight:800;color:var(--blue-600);font-family:var(--font-display);min-width:65px}
-
-/* PAGE HEADER */
-.page-header{background:linear-gradient(160deg,#eff6ff 0%,#f8fafc 60%,#e0f2fe 100%);padding:80px 24px 64px}
-.page-header-inner{max-width:700px;margin:0 auto;text-align:center}
-
-/* RESPONSIVE */
-@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr)};.about-grid,.course-detail-grid{grid-template-columns:1fr}}
-@media(max-width:768px){
-  .hamburger{display:flex}
-  .nav-links{position:fixed;top:70px;left:0;right:0;background:white;flex-direction:column;padding:16px;border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow-lg);display:none}
-  .nav-links.open{display:flex}
-  .hero-inner{grid-template-columns:1fr;text-align:center}
-  .hero-btns{justify-content:center}
-  .hero-visual{display:none}
-  .contact-grid{grid-template-columns:1fr}
-  .grid-2{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr 1fr}
+.about-feats{display:flex;flex-direction:column;gap:22px;margin-top:32px}
+.about-feat{display:flex;gap:16px;align-items:flex-start}
+.feat-ico{
+  width:46px;height:46px;border-radius:12px;
+  background:var(--blue-soft);color:var(--blue);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;flex-shrink:0;
+  transition:background var(--t),color var(--t);
 }
-@media(max-width:500px){.grid-3,.grid-2{grid-template-columns:1fr};.footer-grid{grid-template-columns:1fr}}
+.about-feat:hover .feat-ico{background:var(--blue);color:#fff}
+.feat-body h4{font-weight:700;font-size:.95rem;margin-bottom:4px}
+.feat-body p{font-size:.86rem;color:var(--gray-500)}
+.about-illustration{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg)}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.stat-box{
+  background:var(--gray-50);border:1px solid var(--gray-200);
+  border-radius:var(--radius);padding:22px 20px;
+  transition:box-shadow var(--t),transform var(--t);
+}
+.stat-box:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.stat-box strong{font-family:'Sora',sans-serif;font-size:1.8rem;font-weight:800;color:var(--blue);display:block;margin-bottom:4px}
+.stat-box span{font-size:.82rem;color:var(--gray-500)}
+
+/* ── COURSES PREVIEW ── */
+.courses-sec{background:var(--gray-50)}
+.courses-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px}
+.course-card{
+  background:#fff;border-radius:var(--radius);
+  padding:28px 22px;border:1px solid var(--gray-200);
+  box-shadow:var(--shadow-xs);
+  transition:all var(--t) var(--ease);
+  cursor:pointer;position:relative;overflow:hidden;
+}
+.course-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:3.5px;
+  background:linear-gradient(90deg,var(--blue),var(--cyan));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform var(--t) var(--ease);
+}
+.course-card:hover{transform:translateY(-7px);box-shadow:var(--shadow-lg)}
+.course-card:hover::after{transform:scaleX(1)}
+.card-ico{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.45rem;margin-bottom:18px}
+.course-card h3{font-family:'Sora',sans-serif;font-size:1rem;font-weight:700;margin-bottom:8px}
+.course-card p{font-size:.84rem;color:var(--gray-500);line-height:1.65;margin-bottom:14px}
+.card-meta{display:flex;align-items:center;gap:7px;font-size:.76rem;color:var(--gray-400);margin-bottom:18px}
+.card-meta i{color:var(--blue)}
+.btn-card{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--blue-soft);color:var(--blue);
+  font-weight:700;font-size:.82rem;
+  padding:8px 16px;border-radius:var(--radius-sm);
+  border:none;cursor:pointer;transition:all var(--t) var(--ease);
+}
+.btn-card:hover{background:var(--blue);color:#fff}
+
+/* ── FOUNDERS ── */
+.founders-sec{background:#fff}
+.founders-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:26px}
+.founder-card{
+  background:var(--gray-50);border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg);padding:34px 26px;
+  text-align:center;transition:all var(--t) var(--ease);
+}
+.founder-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+.founder-ava{
+  width:90px;height:90px;border-radius:50%;
+  margin:0 auto 20px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;
+  color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.18);
+}
+.founder-card h3{font-family:'Sora',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:4px}
+.founder-role{color:var(--blue);font-size:.85rem;font-weight:600;margin-bottom:12px}
+.founder-card p{font-size:.86rem;color:var(--gray-500);line-height:1.7}
+.founder-badge{display:inline-block;margin-top:14px;background:var(--blue-soft);color:var(--blue);border-radius:50px;padding:4px 14px;font-size:.76rem;font-weight:700}
+
+/* ── WHY CHOOSE US ── */
+.why-sec{background:linear-gradient(140deg,#0c3d8a 0%,#1a6ed8 100%);color:#fff}
+.why-sec .section-title{color:#fff}
+.why-sec .section-sub{color:rgba(255,255,255,.72)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.why-card{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);
+  backdrop-filter:blur(6px);border-radius:var(--radius);padding:28px 22px;
+  transition:all var(--t) var(--ease);
+}
+.why-card:hover{background:rgba(255,255,255,.18);transform:translateY(-4px)}
+.why-ico{width:50px;height:50px;border-radius:13px;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;font-size:1.35rem;color:#93c5fd;margin-bottom:16px}
+.why-card h3{font-family:'Sora',sans-serif;font-weight:700;font-size:.97rem;margin-bottom:8px}
+.why-card p{font-size:.84rem;opacity:.78;line-height:1.65}
+
+/* ── TESTIMONIALS ── */
+.testi-sec{background:var(--gray-50)}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.testi-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow-xs);transition:all var(--t) var(--ease)}
+.testi-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.testi-stars{color:#f59e0b;margin-bottom:14px;font-size:.88rem}
+.testi-text{font-size:.9rem;color:var(--gray-500);font-style:italic;line-height:1.75;margin-bottom:20px}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-av{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.9rem;flex-shrink:0}
+.testi-name{font-weight:700;font-size:.9rem}
+.testi-loc{font-size:.76rem;color:var(--gray-400)}
+
+/* ── CTA BANNER ── */
+.cta-banner{background:linear-gradient(135deg,#0c3d8a,#0891b2);padding:80px 28px;text-align:center}
+.cta-banner h2{font-family:'Sora',sans-serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:#fff;margin-bottom:14px}
+.cta-banner p{color:rgba(255,255,255,.78);font-size:1.02rem;margin-bottom:34px;max-width:500px;margin-left:auto;margin-right:auto}
+.cta-banner-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ── FOOTER ── */
+footer{background:var(--gray-900);color:rgba(255,255,255,.65);padding:68px 28px 28px}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:52px}
+.footer-brand p{font-size:.85rem;margin:14px 0 20px;line-height:1.75;max-width:270px}
+.social-row{display:flex;gap:9px}
+.social-a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.65);font-size:.92rem;transition:all var(--t) var(--ease)}
+.social-a:hover{background:var(--blue);color:#fff}
+.footer-col h4{font-family:'Sora',sans-serif;font-weight:700;color:#fff;margin-bottom:18px;font-size:.93rem}
+.footer-col ul{display:flex;flex-direction:column;gap:10px}
+.footer-col ul li a,.footer-col ul li button{color:rgba(255,255,255,.58);font-size:.85rem;background:none;border:none;text-align:left;display:flex;align-items:center;gap:6px;transition:all var(--t) var(--ease)}
+.footer-col ul li a:hover,.footer-col ul li button:hover{color:#fff;padding-left:4px}
+.footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.8rem}
+
+/* ── FOOTER LOGO ── */
+.footer-logo{display:flex;align-items:center;gap:10px;cursor:pointer;margin-bottom:16px}
+.footer-logo-name{font-family:'Sora',sans-serif;font-size:18px;font-weight:700;color:#fff;letter-spacing:0.3px}
+
+/* ═══════════════════════════════════════
+   BLOG PAGE
+═══════════════════════════════════════ */
+.page-hero{background:linear-gradient(135deg,#0c3d8a,#1a6ed8);padding:calc(var(--nav-height) + 64px) 28px 64px;text-align:center}
+.page-hero h1{font-family:'Sora',sans-serif;font-size:clamp(1.9rem,3.5vw,3rem);font-weight:800;color:#fff;margin-bottom:12px}
+.page-hero p{color:rgba(255,255,255,.78);font-size:1.05rem;max-width:560px;margin:0 auto}
+.blog-wrap{max-width:1100px;margin:0 auto;padding:64px 28px}
+.filter-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:44px}
+.filter-btn{background:#fff;border:1.5px solid var(--gray-200);color:var(--gray-600);padding:7px 18px;border-radius:50px;font-size:.84rem;font-weight:500;cursor:pointer;transition:all var(--t) var(--ease)}
+.filter-btn:hover,.filter-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:26px}
+.blog-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-xs);cursor:pointer;transition:all var(--t) var(--ease)}
+.blog-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.blog-thumb{height:195px;display:flex;align-items:center;justify-content:center;font-size:4rem}
+.blog-body{padding:24px}
+.blog-cat{display:inline-block;background:var(--blue-soft);color:var(--blue);border-radius:50px;padding:3px 12px;font-size:.73rem;font-weight:700;margin-bottom:12px}
+.blog-card h3{font-family:'Sora',sans-serif;font-weight:700;font-size:1.02rem;margin-bottom:9px;line-height:1.35}
+.blog-card p{font-size:.85rem;color:var(--gray-500);margin-bottom:16px;line-height:1.65}
+.blog-meta{display:flex;justify-content:space-between;align-items:center;font-size:.76rem;color:var(--gray-400)}
+.blog-meta span{display:flex;align-items:center;gap:5px}
+
+/* Blog post */
+.post-wrap{max-width:790px;margin:0 auto;padding:64px 28px}
+.back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-weight:700;font-size:.88rem;background:none;border:none;cursor:pointer;margin-bottom:32px;padding:0;transition:gap var(--t)}
+.back-btn:hover{gap:12px}
+.post-wrap h1{font-family:'Sora',sans-serif;font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800;margin-bottom:20px;line-height:1.22}
+.meta-chip{display:flex;align-items:center;flex-wrap:wrap;gap:18px;font-size:.8rem;color:var(--gray-400);margin-bottom:28px}
+.meta-chip span{display:flex;align-items:center;gap:5px}
+.post-wrap h2{font-family:'Sora',sans-serif;font-size:1.4rem;font-weight:700;margin:36px 0 12px;color:var(--gray-800)}
+.post-wrap h3{font-family:'Sora',sans-serif;font-size:1.1rem;font-weight:700;margin:24px 0 10px;color:var(--gray-700)}
+.post-wrap p{font-size:.96rem;color:var(--gray-600);margin-bottom:16px;line-height:1.82}
+.post-wrap ul,.post-wrap ol{padding-left:22px;margin-bottom:18px}
+.post-wrap li{font-size:.96rem;color:var(--gray-600);margin-bottom:9px;line-height:1.72}
+.post-wrap strong{color:var(--gray-800)}
+.meta-box{background:var(--blue-soft);border-left:4px solid var(--blue);border-radius:10px;padding:16px 20px;margin-bottom:32px;font-size:.83rem;color:var(--gray-600);line-height:1.7}
+.faq-section{background:var(--gray-50);border-radius:var(--radius-lg);padding:30px;margin-top:44px}
+.faq-section h2{margin-top:0!important}
+.faq-item{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid var(--gray-200)}
+.faq-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.faq-q{font-weight:700;color:var(--gray-800);margin-bottom:7px;font-size:.94rem}
+.post-cta{background:linear-gradient(135deg,var(--blue),#0891b2);border-radius:var(--radius-lg);padding:36px;color:#fff;text-align:center;margin-top:44px}
+.post-cta h3{font-family:'Sora',sans-serif;font-size:1.45rem;font-weight:800;margin-bottom:10px}
+.post-cta p{opacity:.85;margin-bottom:22px;font-size:.95rem}
+table{width:100%;border-collapse:collapse;margin:20px 0 26px;font-size:.86rem}
+table th{background:var(--blue);color:#fff;padding:11px 15px;text-align:left;font-weight:700}
+table td{padding:10px 15px;border-bottom:1px solid var(--gray-200);color:var(--gray-600)}
+table tr:hover td{background:var(--blue-soft)}
+
+/* ═══════════════════════════════════════
+   CONTACT PAGE
+═══════════════════════════════════════ */
+.contact-wrap{max-width:1100px;margin:0 auto;padding:64px 28px;display:grid;grid-template-columns:1fr 1.15fr;gap:52px;align-items:start}
+.contact-info h2{font-family:'Sora',sans-serif;font-size:1.8rem;font-weight:800;margin-bottom:14px}
+.contact-info>p{color:var(--gray-500);margin-bottom:32px;line-height:1.75}
+.c-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:22px}
+.c-ico{width:46px;height:46px;border-radius:12px;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.c-item h4{font-weight:700;font-size:.9rem;margin-bottom:3px}
+.c-item p,.c-item a{color:var(--gray-500);font-size:.86rem}
+.c-item a{color:var(--blue)}
+.map-box{height:210px;border:2px dashed var(--gray-300);border-radius:var(--radius-lg);background:var(--blue-soft);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--blue);margin-top:28px}
+.map-box i{font-size:2.5rem}
+.map-box p{font-size:.9rem;font-weight:600}
+.contact-form-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:38px;box-shadow:var(--shadow-md)}
+.contact-form-card h3{font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:800;margin-bottom:26px}
+.fg{margin-bottom:20px}
+.fg label{display:block;font-weight:600;font-size:.85rem;margin-bottom:7px;color:var(--gray-700)}
+.fg input,.fg textarea,.fg select{width:100%;padding:12px 16px;border:1.5px solid var(--gray-200);border-radius:var(--radius-sm);font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--gray-800);background:var(--gray-50);outline:none;transition:all var(--t) var(--ease)}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(26,110,216,.1)}
+.fg textarea{min-height:130px;resize:vertical}
+.btn-submit{width:100%;background:var(--blue);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:1rem;padding:14px;border-radius:var(--radius-sm);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:all var(--t) var(--ease)}
+.btn-submit:hover{background:var(--blue-deep);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.success-msg{display:none;background:#dcfce7;border:1px solid #86efac;color:#166534;border-radius:var(--radius-sm);padding:14px 18px;font-size:.86rem;font-weight:600;margin-top:16px;align-items:center;gap:10px}
+.success-msg.show{display:flex}
+
+/* ═══════════════════════════════════════
+   COURSES PAGE
+═══════════════════════════════════════ */
+.courses-pg-wrap{max-width:1100px;margin:0 auto;padding:64px 28px}
+.course-detail-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);box-shadow:var(--shadow-xs);margin-bottom:34px;overflow:hidden;transition:box-shadow var(--t) var(--ease)}
+.course-detail-card:hover{box-shadow:var(--shadow-lg)}
+.cd-header{padding:28px 32px;color:#fff;display:flex;align-items:center;gap:20px}
+.cd-icon{width:62px;height:62px;border-radius:16px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0}
+.cd-header h2{font-family:'Sora',sans-serif;font-weight:800;font-size:1.4rem;margin-bottom:4px}
+.cd-header p{opacity:.82;font-size:.9rem}
+.cd-body{padding:28px 32px}
+.cd-body>p{color:var(--gray-500);margin-bottom:22px;line-height:1.75}
+.learn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:11px;margin-bottom:24px}
+.learn-item{display:flex;gap:10px;align-items:flex-start;font-size:.84rem;color:var(--gray-600)}
+.learn-item i{color:var(--green);margin-top:3px;flex-shrink:0}
+.tags-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:24px}
+.tag{background:var(--blue-soft);color:var(--blue);border-radius:50px;padding:4px 13px;font-size:.75rem;font-weight:700}
+.cd-footer{display:flex;align-items:center;justify-content:space-between;padding-top:20px;border-top:1px solid var(--gray-200);flex-wrap:wrap;gap:16px}
+.cd-meta{display:flex;gap:20px;flex-wrap:wrap}
+.cd-meta span{display:flex;align-items:center;gap:7px;font-size:.82rem;color:var(--gray-500)}
+.cd-meta span i{color:var(--blue)}
+.btn-enroll{background:var(--blue);color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:.93rem;padding:12px 26px;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:all var(--t) var(--ease);display:flex;align-items:center;gap:8px}
+.btn-enroll:hover{background:var(--blue-deep);transform:translateY(-1px)}
+
+/* ── WHATSAPP FLOAT ── */
+.wa-btn{position:fixed;bottom:28px;right:28px;z-index:9999;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 4px 22px rgba(37,211,102,.5);text-decoration:none;animation:waBounce 2.2s ease-in-out infinite;transition:transform var(--t)}
+.wa-btn:hover{transform:scale(1.12)}
+@keyframes waBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .about-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .contact-wrap{grid-template-columns:1fr}
+}
+@media(max-width:1024px) and (min-width:641px){
+  .courses-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .testi-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  section{padding:72px 24px}
+}
+@media(max-width:640px){
+  :root{--nav-height:70px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-inner{padding:0 16px}
+  section{padding:56px 16px}
+  .hero-inner{padding:56px 16px 48px;grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .hero-title{font-size:clamp(1.7rem,7vw,2.4rem)}
+  .hero-sub{font-size:.95rem}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{justify-content:center;width:100%}
+  .hero-stats{gap:12px;flex-wrap:wrap}
+  .h-stat strong{font-size:1.4rem}
+  .courses-grid{grid-template-columns:1fr}
+  .about-stats{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:1fr}
+  .cd-header{padding:20px;flex-direction:column;gap:12px}
+  .cd-body{padding:20px}
+  .cd-footer{flex-direction:column;align-items:flex-start}
+  .btn-enroll{width:100%;justify-content:center}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .contact-wrap{padding:40px 16px}
+  .contact-form-card{padding:24px 18px}
+  .logo-name{font-size:17px}
+}
+*:focus-visible{outline:3px solid #2563EB;outline-offset:3px;border-radius:4px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
 
-<!-- WHATSAPP FAB -->
-<a class="wa-fab" href="https://wa.me/923077139942?text=Hi! I found Datamend online and want to learn more." target="_blank" rel="noreferrer" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.484 2 12.017c0 1.99.52 3.86 1.438 5.47L2.001 22l4.636-1.214A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-9.983C22 6.477 17.523 2 12 2z"/></svg>
-</a>
-
-<!-- NAVBAR -->
-<nav class="navbar" id="navbar">
+<!-- ═══════════════════════════════════════ NAVBAR ═══════════════════════════════════════ -->
+<nav id="mainNav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a class="nav-logo" href="#" onclick="showPage('home');return false">Datamend</a>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#" onclick="showPage('home');return false" id="nav-home" class="active">Home</a></li>
-      <li><a href="#" onclick="showPage('courses');return false" id="nav-courses">Courses</a></li>
-      <li><a href="#" onclick="showPage('blog');return false" id="nav-blog">Blog</a></li>
-      <li><a href="#" onclick="showPage('contact');return false" id="nav-contact">Contact</a></li>
-      <li><a href="#" onclick="showPage('courses');return false" class="nav-cta">Get Started</a></li>
+
+    <!-- LOGO -->
+    <div class="logo" onclick="showPage('home')">
+      <img src="image/logo3.png" alt="DataMend Logo">
+      <span class="logo-name"><span class="data">Data</span><span class="mend">Mend</span></span>
+    </div>
+
+    <!-- Desktop links -->
+    <ul class="nav-links" role="menubar" aria-label="Site navigation">
+      <li role="none"><button class="nav-btn active" onclick="showPage('home',this)" role="menuitem" aria-current="page">Home</button></li>
+      <li role="none">
+        <button class="nav-btn" onclick="showPage('courses',this)" role="menuitem" aria-haspopup="true" aria-expanded="false" id="coursesBtn">
+          Courses <i class="fas fa-chevron-down chevron" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown" role="menu" aria-labelledby="coursesBtn">
+          <div class="dd-link" onclick="showPage('courses')" role="menuitem" tabindex="0">
+            <div class="dd-ico" aria-hidden="true"><i class="fas fa-robot"></i></div>
+            <div><strong>AI Automation &amp; Agents</strong><br><small style="color:#94a3b8">Agentic AI · Generative AI</small></div>
+          </div>
+          <div class="dd-link" onclick="showPage('courses')" role="menuitem" tabindex="0">
+            <div class="dd-ico" aria-hidden="true"><i class="fas fa-chart-bar"></i></div>
+            <div><strong>Power BI</strong><br><small style="color:#94a3b8">Dashboards & Analytics</small></div>
+          </div>
+          <div class="dd-link" onclick="showPage('courses')" role="menuitem" tabindex="0">
+            <div class="dd-ico" aria-hidden="true"><i class="fas fa-database"></i></div>
+            <div><strong>Data Engineering</strong><br><small style="color:#94a3b8">Pipelines & Warehouses</small></div>
+          </div>
+          <div class="dd-link" onclick="showPage('courses')" role="menuitem" tabindex="0">
+            <div class="dd-ico" aria-hidden="true"><i class="fas fa-server"></i></div>
+            <div><strong>Big Data</strong><br><small style="color:#94a3b8">Hadoop · Spark · Kafka</small></div>
+          </div>
+          <div class="dd-link" onclick="showPage('courses')" role="menuitem" tabindex="0">
+            <div class="dd-ico" aria-hidden="true"><i class="fas fa-plug"></i></div>
+            <div><strong>Talend</strong><br><small style="color:#94a3b8">ETL & Data Integration</small></div>
+          </div>
+        </div>
+      </li>
+      <li role="none"><button class="nav-btn" onclick="showPage('blog',this)" role="menuitem">Blog</button></li>
+      <li role="none"><button class="nav-btn" onclick="showPage('contact',this)" role="menuitem">Contact</button></li>
+      <li role="none"><button class="nav-btn nav-cta" onclick="showPage('contact',this)" role="menuitem" aria-label="Get started with DataMend">Get Started</button></li>
     </ul>
+
+    <button class="hamburger" onclick="toggleMobile()" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileNav" id="hamburgerBtn">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+
   </div>
 </nav>
 
-<!-- ═══════════════════════════════ HOME PAGE ═══════════════════════════════ -->
-<div id="page-home" class="page active">
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+  <button onclick="showPage('home');closeMobile()">🏠 Home</button>
+  <button onclick="showPage('courses');closeMobile()">📚 Courses</button>
+  <button onclick="showPage('blog');closeMobile()">✍️ Blog</button>
+  <button onclick="showPage('contact');closeMobile()">📞 Contact</button>
+</div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-mesh"></div>
-    <div class="hero-dots"></div>
-    <div class="hero-inner">
+<!-- WhatsApp Float -->
+<a class="wa-btn" href="https://wa.me/923077139942" target="_blank" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<!-- ╔═════════════════════════════════════════════════════╗
+     ║               HOME PAGE                             ║
+     ╚═════════════════════════════════════════════════════╝ -->
+<div class="page active" id="home">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-blob blob-a"></div>
+  <div class="hero-blob blob-b"></div>
+  <div class="hero-blob blob-c"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <i class="fas fa-star"></i> Pakistan's #1 AI &amp; Data Learning Platform
+      </div>
+      <h1 class="hero-title">
+        Learn <em>AI, Data &amp;</em><br>Automation Skills<br>That <em>Get You Hired</em>
+      </h1>
+      <p class="hero-sub">
+        Master AI Automation, Agentic AI, Generative AI, Data Engineering, and Analytics — all in one platform. Practical, industry-ready, and beginner-friendly.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-white" onclick="showPage('courses')">
+          <i class="fas fa-graduation-cap"></i> Explore Courses
+        </button>
+        <button class="btn btn-ghost" onclick="showPage('contact')">
+          <i class="fas fa-rocket"></i> Get Started
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="h-stat"><strong>5+</strong><span>Courses</span></div>
+        <div class="h-stat"><strong>1,000+</strong><span>Students</span></div>
+        <div class="h-stat"><strong>12+</strong><span>Yrs Exp</span></div>
+        <div class="h-stat"><strong>100%</strong><span>Practical</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="pulse-dot"></div>
+      <div class="hero-card">
+        <div class="hero-card-label">What You Will Master</div>
+        <div class="skill-grid">
+          <div class="skill-tile st-ai"><i class="fas fa-robot"></i>AI Agents</div>
+          <div class="skill-tile st-gen"><i class="fas fa-brain"></i>Gen AI</div>
+          <div class="skill-tile st-bi"><i class="fas fa-chart-bar"></i>Power BI</div>
+          <div class="skill-tile st-de"><i class="fas fa-database"></i>Data Eng</div>
+          <div class="skill-tile st-bd"><i class="fas fa-server"></i>Big Data</div>
+          <div class="skill-tile st-tl"><i class="fas fa-plug"></i>Talend</div>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-team-row">
+          <div class="team-ava">M</div>
+          <div class="team-ava">D</div>
+          <div class="team-ava">N</div>
+          <span class="hero-team-text">Taught by industry veterans with 12+ years experience</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-sec">
+  <div class="container">
+    <div class="about-grid">
       <div>
-        <div class="section-badge fade-in visible">🚀 Pakistan's #1 AI Learning Platform</div>
-        <h1 class="hero-title fade-in visible d1">Learn <span class="gradient-text">AI, Data &</span><br>Automation Skills</h1>
-        <p class="hero-sub fade-in visible d2">Master AI Automation, Agentic AI, Generative AI, Data Engineering, and Analytics — all in one platform. Practical. Industry-ready. Beginner-friendly.</p>
-        <div class="hero-btns fade-in visible d3">
-          <a href="#" class="btn-primary" onclick="showPage('courses');return false">Explore Courses →</a>
-          <a href="#" class="btn-secondary" onclick="showPage('courses');return false">Get Started</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="card-stack">
-          <div class="hero-blob"></div>
-          <div class="stat-card" style="top:20px;left:0"><div class="num">5,000+</div><div class="lbl">Students Enrolled</div></div>
-          <div class="stat-card" style="top:130px;right:0"><div class="num">5 Courses</div><div class="lbl">Industry-Ready</div></div>
-          <div class="stat-card" style="bottom:20px;left:20px"><div class="num">12+ Yrs</div><div class="lbl">Expert Experience</div></div>
-          <div class="hero-emoji">🤖</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section" style="background:var(--gray-50)">
-    <div class="section-inner">
-      <div class="about-grid">
-        <div class="fade-left">
-          <div class="section-badge">🏢 About Datamend</div>
-          <h2 class="section-title">We Turn <span class="gradient-text">Curious Minds</span> Into AI Experts</h2>
-          <p class="section-sub">Datamend is Pakistan's leading AI and data education platform. We bridge the gap between academic theory and industry demands through hands-on, project-based learning designed by practitioners with real-world experience.</p>
-          <div class="mini-cards">
-            <div class="mini-card"><div class="ic">🎯</div><div class="tit">Practical First</div><div class="sub">Theory follows practice — always</div></div>
-            <div class="mini-card"><div class="ic">🏭</div><div class="tit">Industry Ready</div><div class="sub">Skills employers actually want</div></div>
-            <div class="mini-card"><div class="ic">🌱</div><div class="tit">Beginner Friendly</div><div class="sub">Zero to expert in steps</div></div>
-            <div class="mini-card"><div class="ic">🤝</div><div class="tit">Community</div><div class="sub">Learn alongside ambitious peers</div></div>
+        <div class="section-badge"><i class="fas fa-info-circle"></i> About Datamend</div>
+        <h2 class="section-title">We Build Future-Ready<br>AI &amp; Data Professionals</h2>
+        <p style="color:var(--gray-500);line-height:1.8;margin-bottom:10px">
+          Datamend is Pakistan's leading AI and data education platform, founded by industry veterans with 12+ years of hands-on experience in enterprise data systems, AI automation, and advanced analytics.
+        </p>
+        <p style="color:var(--gray-500);line-height:1.8;margin-bottom:0">
+          Our mission: bridge the gap between academic learning and real-world skills. Every course is built around live projects, industry tools, and practical problem-solving — the way professionals actually work.
+        </p>
+        <div class="about-feats">
+          <div class="about-feat fade-up d1">
+            <div class="feat-ico"><i class="fas fa-briefcase"></i></div>
+            <div class="feat-body">
+              <h4>Industry-Led Curriculum</h4>
+              <p>Built by professionals at the forefront of AI and data engineering, not textbooks.</p>
+            </div>
+          </div>
+          <div class="about-feat fade-up d2">
+            <div class="feat-ico"><i class="fas fa-project-diagram"></i></div>
+            <div class="feat-body">
+              <h4>Real-World Projects</h4>
+              <p>Graduate with a portfolio of production-ready projects that impress employers.</p>
+            </div>
+          </div>
+          <div class="about-feat fade-up d3">
+            <div class="feat-ico"><i class="fas fa-users"></i></div>
+            <div class="feat-body">
+              <h4>Beginner Friendly</h4>
+              <p>Zero experience required — we guide you step by step from zero to job-ready.</p>
+            </div>
           </div>
         </div>
-        <div class="fade-right">
-          <div class="stat-row"><div class="stat-num">98%</div><div>Student Satisfaction Rate</div></div>
-          <div class="stat-row"><div class="stat-num">50+</div><div>Real-World Projects</div></div>
-          <div class="stat-row"><div class="stat-num">3</div><div>Expert Instructors</div></div>
-          <div class="stat-row"><div class="stat-num">100%</div><div>Online & Flexible</div></div>
+      </div>
+      <div class="fade-up d2">
+        <div class="about-illustration" style="background:linear-gradient(145deg,#dbeafe,#e0f2fe);padding:40px">
+          <svg viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px">
+            <rect width="420" height="320" fill="url(#bg)" rx="12"/>
+            <defs>
+              <linearGradient id="bg" x1="0" y1="0" x2="420" y2="320" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#dbeafe"/><stop offset="100%" stop-color="#bfdbfe"/>
+              </linearGradient>
+              <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#1a6ed8"/><stop offset="100%" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+            <g stroke="#c7d9f5" stroke-width=".6" opacity=".5">
+              <line x1="0" y1="40" x2="420" y2="40"/><line x1="0" y1="80" x2="420" y2="80"/>
+              <line x1="0" y1="120" x2="420" y2="120"/><line x1="0" y1="160" x2="420" y2="160"/>
+              <line x1="0" y1="200" x2="420" y2="200"/><line x1="0" y1="240" x2="420" y2="240"/>
+              <line x1="0" y1="280" x2="420" y2="280"/>
+              <line x1="60" y1="0" x2="60" y2="320"/><line x1="120" y1="0" x2="120" y2="320"/>
+              <line x1="180" y1="0" x2="180" y2="320"/><line x1="240" y1="0" x2="240" y2="320"/>
+              <line x1="300" y1="0" x2="300" y2="320"/><line x1="360" y1="0" x2="360" y2="320"/>
+            </g>
+            <circle cx="210" cy="160" r="48" fill="url(#blueGrad)" opacity=".95"/>
+            <circle cx="210" cy="160" r="36" fill="#fff" opacity=".2"/>
+            <text x="210" y="150" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#fff">🧠</text>
+            <text x="210" y="178" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#93c5fd">DATAMEND AI</text>
+            <g stroke="url(#blueGrad)" stroke-width="2" opacity=".6">
+              <line x1="210" y1="112" x2="210" y2="60"/><line x1="210" y1="208" x2="210" y2="260"/>
+              <line x1="162" y1="128" x2="100" y2="90"/><line x1="258" y1="128" x2="320" y2="90"/>
+              <line x1="162" y1="192" x2="100" y2="240"/><line x1="258" y1="192" x2="320" y2="240"/>
+              <line x1="162" y1="160" x2="80" y2="160"/><line x1="258" y1="160" x2="340" y2="160"/>
+            </g>
+            <circle cx="210" cy="55" r="24" fill="#1a6ed8" opacity=".85"/>
+            <text x="210" y="61" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff">⚡</text>
+            <circle cx="210" cy="265" r="24" fill="#0891b2" opacity=".85"/>
+            <text x="210" y="271" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#fff">📊</text>
+            <circle cx="90" cy="88" r="22" fill="#7c3aed" opacity=".85"/>
+            <text x="90" y="95" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff">🤖</text>
+            <circle cx="330" cy="88" r="22" fill="#10b981" opacity=".85"/>
+            <text x="330" y="95" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff">💡</text>
+            <circle cx="72" cy="160" r="22" fill="#f59e0b" opacity=".85"/>
+            <text x="72" y="167" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff">🗄</text>
+            <circle cx="348" cy="160" r="22" fill="#ea580c" opacity=".85"/>
+            <text x="348" y="167" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff">🔗</text>
+            <circle cx="90" cy="242" r="22" fill="#06b6d4" opacity=".85"/>
+            <text x="90" y="249" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff">📈</text>
+            <circle cx="330" cy="242" r="22" fill="#1a6ed8" opacity=".85"/>
+            <text x="330" y="249" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#fff">🧬</text>
+          </svg>
+        </div>
+        <div class="about-stats">
+          <div class="stat-box fade-up d3"><strong>12+</strong><span>Years Industry Experience</span></div>
+          <div class="stat-box fade-up d4"><strong>1K+</strong><span>Students Trained</span></div>
+          <div class="stat-box fade-up d3"><strong>4.9★</strong><span>Average Rating</span></div>
+          <div class="stat-box fade-up d4"><strong>85%</strong><span>Job Placement Rate</span></div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- COURSES PREVIEW -->
-  <section class="section">
-    <div class="section-inner">
-      <div class="text-center" style="margin-bottom:56px">
-        <div class="section-badge fade-in">📚 Our Programs</div>
-        <h2 class="section-title fade-in d1">Courses Designed for <span class="gradient-text">the Future</span></h2>
-        <p class="section-sub fade-in d2 mx-auto">Five industry-aligned courses built to transform your career in AI, data, and automation.</p>
+<!-- COURSES PREVIEW -->
+<section class="courses-sec">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="section-badge"><i class="fas fa-book-open"></i> Our Courses</div>
+      <h2 class="section-title">Transform Your Career with Expert-Led Courses</h2>
+      <p class="section-sub" style="margin:0 auto">From complete beginner to industry professional — choose your path and start building real skills today.</p>
+    </div>
+    <div class="courses-grid">
+      <div class="course-card fade-up d1" onclick="showPage('courses')">
+        <div class="card-ico" style="background:#dbeafe;color:#1a6ed8"><i class="fas fa-robot"></i></div>
+        <h3>AI Automation &amp; Agents</h3>
+        <p>Master Agents, Agentic AI, and Generative AI — the complete AI skillset for the modern world.</p>
+        <div class="card-meta"><i class="fas fa-clock"></i> 10–12 Weeks &nbsp;<i class="fas fa-signal"></i> All Levels</div>
+        <button class="btn-card" onclick="showPage('courses')">Learn More <i class="fas fa-arrow-right"></i></button>
       </div>
-      <div class="grid-3">
-        <div class="card fade-in">
-          <div class="course-icon" style="background:#eff6ff">🤖</div>
-          <div class="course-tag">Most Popular</div>
-          <div class="course-title">AI Automation & Agentic AI</div>
-          <p class="course-desc">Master AI Agents, Agentic AI, and Generative AI — all in one. Build autonomous workflows and real-world AI pipelines.</p>
-          <div class="course-meta"><span>⏱ 12 Weeks</span><span>👥 2.4k+</span></div>
-          <button class="course-cta" onclick="showPage('courses')">Learn More →</button>
+      <div class="course-card fade-up d2" onclick="showPage('courses')">
+        <div class="card-ico" style="background:#fef3c7;color:#d97706"><i class="fas fa-chart-bar"></i></div>
+        <h3>Power BI</h3>
+        <p>Build stunning dashboards and analytics reports that turn raw data into business insights.</p>
+        <div class="card-meta"><i class="fas fa-clock"></i> 6–8 Weeks &nbsp;<i class="fas fa-signal"></i> Beginner</div>
+        <button class="btn-card" onclick="showPage('courses')">Learn More <i class="fas fa-arrow-right"></i></button>
+      </div>
+      <div class="course-card fade-up d3" onclick="showPage('courses')">
+        <div class="card-ico" style="background:#dcfce7;color:#16a34a"><i class="fas fa-database"></i></div>
+        <h3>Data Engineering</h3>
+        <p>Design scalable pipelines, warehouses, and architecture used by Fortune 500 companies.</p>
+        <div class="card-meta"><i class="fas fa-clock"></i> 12 Weeks &nbsp;<i class="fas fa-signal"></i> Intermediate</div>
+        <button class="btn-card" onclick="showPage('courses')">Learn More <i class="fas fa-arrow-right"></i></button>
+      </div>
+      <div class="course-card fade-up d4" onclick="showPage('courses')">
+        <div class="card-ico" style="background:#f3e8ff;color:#7c3aed"><i class="fas fa-server"></i></div>
+        <h3>Big Data</h3>
+        <p>Hadoop, Spark, Kafka — process billions of records efficiently at enterprise scale.</p>
+        <div class="card-meta"><i class="fas fa-clock"></i> 10 Weeks &nbsp;<i class="fas fa-signal"></i> Advanced</div>
+        <button class="btn-card" onclick="showPage('courses')">Learn More <i class="fas fa-arrow-right"></i></button>
+      </div>
+      <div class="course-card fade-up d5" onclick="showPage('courses')">
+        <div class="card-ico" style="background:#ffedd5;color:#ea580c"><i class="fas fa-plug"></i></div>
+        <h3>Talend</h3>
+        <p>Master ETL processes and data integration — the industry standard for data teams worldwide.</p>
+        <div class="card-meta"><i class="fas fa-clock"></i> 8 Weeks &nbsp;<i class="fas fa-signal"></i> Intermediate</div>
+        <button class="btn-card" onclick="showPage('courses')">Learn More <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:42px">
+      <button class="btn btn-blue" onclick="showPage('courses')"><i class="fas fa-graduation-cap"></i> View All Courses</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section class="founders-sec">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="section-badge"><i class="fas fa-users"></i> Our Founders</div>
+      <h2 class="section-title">Meet the Experts Behind Datamend</h2>
+<p class="section-sub" style="text-align:center;margin:0 auto;">Decades of combined real-world industry experience brought to every single lesson.</p>    </div>
+    <div class="founders-grid">
+      <div class="founder-card fade-up d1">
+        <div class="founder-ava" style="background:linear-gradient(135deg,#1a6ed8,#0891b2)">M</div>
+        <h3>Muqadas Bibi</h3>
+        <div class="founder-role">Co-Founder &amp; Big Data & Cloud | AWS · GCP · OCI Certified</div>
+        <p>With 12+ years in building enterprise data systems across telecom, banking, defense & public sector. Hadoop · Spark · Kafka · Oracle RAC · Talend · Power BI · Microsoft Fabric.</p>
+        <span class="founder-badge">Lead Instructor</span>
+      </div>
+      <div class="founder-card fade-up d2">
+        <div class="founder-ava" style="background:linear-gradient(135deg,#7c3aed,#06b6d4)">D</div>
+        <h3>Duaa Ali</h3>
+        <div class="founder-role">Co-Founder &amp; Analytics Engineer</div>
+        <p>Duaa specializes in data engineering, Tableau, Python, Power BI, and QlikView. She has a strong ability to break down complex data engineering and analytics concepts into simple, practical lessons.</p>
+        <span class="founder-badge">Analytics Engineer</span>
+      </div>
+      <div class="founder-card fade-up d3">
+        <div class="founder-ava" style="background:linear-gradient(135deg,#0891b2,#10b981)">N</div>
+        <h3>Noor Fatima</h3>
+        <div class="founder-role">Co-Founder &amp; AI Research Lead</div>
+        <p>Co-founder of DataMend, building data-driven solutions to solve real-world business problems. Passionate about leveraging AI, automation, and data engineering to create scalable, impactful systems.</p>
+        <span class="founder-badge">AI Researcher</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-sec">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="section-badge" style="background:rgba(255,255,255,.15);color:#fff"><i class="fas fa-check-circle"></i> Why Datamend</div>
+      <h2 class="section-title">Why Thousands Choose Datamend</h2>
+      <p class="section-sub" style="margin:0 auto">We don't just teach — we transform careers with proven, practical methods.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-up d1">
+        <div class="why-ico"><i class="fas fa-tools"></i></div>
+        <h3>100% Practical Learning</h3>
+        <p>Every concept is applied immediately to real projects. No theory-only lessons — just skills you can use from day one.</p>
+      </div>
+      <div class="why-card fade-up d2">
+        <div class="why-ico"><i class="fas fa-industry"></i></div>
+        <h3>Industry-Focused Curriculum</h3>
+        <p>Courses are built around what companies actually need — the exact tools, workflows, and skills that matter in 2026.</p>
+      </div>
+      <div class="why-card fade-up d3">
+        <div class="why-ico"><i class="fas fa-seedling"></i></div>
+        <h3>Truly Beginner Friendly</h3>
+        <p>Start from absolute zero. Our step-by-step approach ensures every student progresses regardless of background.</p>
+      </div>
+      <div class="why-card fade-up d4">
+        <div class="why-ico"><i class="fas fa-certificate"></i></div>
+        <h3>Certificate of Completion</h3>
+        <p>Earn industry-recognized certificates that validate your skills and boost your professional credibility.</p>
+      </div>
+      <div class="why-card fade-up d1">
+        <div class="why-ico"><i class="fas fa-headset"></i></div>
+        <h3>Dedicated Support</h3>
+        <p>Get help whenever you need it — from instructors and peers via WhatsApp and live Q&amp;A sessions.</p>
+      </div>
+      <div class="why-card fade-up d2">
+        <div class="why-ico"><i class="fas fa-briefcase"></i></div>
+        <h3>Job-Ready Portfolio</h3>
+        <p>Graduate with real projects that demonstrate your capabilities to potential employers immediately.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-sec">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="section-badge"><i class="fas fa-comments"></i> Testimonials</div>
+      <h2 class="section-title">What Our Students Say</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card fade-up d1">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Datamend completely changed my career. The AI Automation course was incredibly practical — I landed a job within 2 months of completing it."</p>
+        <div class="testi-author">
+          <div class="testi-av" style="background:linear-gradient(135deg,#1a6ed8,#0891b2)">AK</div>
+          <div><div class="testi-name">Ahmed Khan</div><div class="testi-loc">Data Engineer, Islamabad</div></div>
         </div>
-        <div class="card fade-in d1">
-          <div class="course-icon" style="background:#f0fdf4">📊</div>
-          <div class="course-tag">Business Intelligence</div>
-          <div class="course-title">Power BI Mastery</div>
-          <p class="course-desc">Transform raw data into stunning dashboards. Master DAX, Power Query, and real-world business reporting.</p>
-          <div class="course-meta"><span>⏱ 8 Weeks</span><span>👥 1.8k+</span></div>
-          <button class="course-cta" onclick="showPage('courses')">Learn More →</button>
+      </div>
+      <div class="testi-card fade-up d2">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I had zero background in data. The Power BI course was so well-structured that I was building dashboards in my first week!"</p>
+        <div class="testi-author">
+          <div class="testi-av" style="background:linear-gradient(135deg,#7c3aed,#06b6d4)">SA</div>
+          <div><div class="testi-name">Sara Aziz</div><div class="testi-loc">Business Analyst, Lahore</div></div>
         </div>
-        <div class="card fade-in d2">
-          <div class="course-icon" style="background:#fff7ed">⚙️</div>
-          <div class="course-tag">In Demand</div>
-          <div class="course-title">Data Engineering</div>
-          <p class="course-desc">Design and build robust data pipelines. ETL, cloud data warehouses, Apache Spark, and modern data stack.</p>
-          <div class="course-meta"><span>⏱ 14 Weeks</span><span>👥 1.2k+</span></div>
-          <button class="course-cta" onclick="showPage('courses')">Learn More →</button>
-        </div>
-        <div class="card fade-in d1">
-          <div class="course-icon" style="background:#fdf4ff">🌊</div>
-          <div class="course-tag">Enterprise Scale</div>
-          <div class="course-title">Big Data Analytics</div>
-          <p class="course-desc">Handle petabyte-scale datasets with Hadoop, Spark, and cloud platforms for enterprise-grade processing.</p>
-          <div class="course-meta"><span>⏱ 10 Weeks</span><span>👥 900+</span></div>
-          <button class="course-cta" onclick="showPage('courses')">Learn More →</button>
-        </div>
-        <div class="card fade-in d2">
-          <div class="course-icon" style="background:#f0fdfa">🔗</div>
-          <div class="course-tag">Enterprise Tool</div>
-          <div class="course-title">Talend Data Integration</div>
-          <p class="course-desc">Master Talend Open Studio and Cloud for seamless enterprise data integration and ETL job design.</p>
-          <div class="course-meta"><span>⏱ 8 Weeks</span><span>👥 700+</span></div>
-          <button class="course-cta" onclick="showPage('courses')">Learn More →</button>
-        </div>
-        <div class="card fade-in d3" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,var(--blue-50),var(--blue-100));border-style:dashed">
-          <div style="font-size:2.5rem;margin-bottom:16px">🎓</div>
-          <div style="font-weight:700;color:var(--gray-800);margin-bottom:8px">Not sure where to start?</div>
-          <p style="font-size:.88rem;color:var(--gray-500);margin-bottom:20px">Chat with us on WhatsApp and we'll guide you to the right course.</p>
-          <a href="https://wa.me/923077139942?text=Hi! I need help choosing a course." target="_blank" class="btn-primary" style="font-size:.88rem;padding:10px 22px">💬 Ask Us</a>
+      </div>
+      <div class="testi-card fade-up d3">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The Data Engineering course is world-class. Projects are directly applicable to real enterprise scenarios. I now feel confident taking on senior-level roles."</p>
+        <div class="testi-author">
+          <div class="testi-av" style="background:linear-gradient(135deg,#0891b2,#10b981)">UH</div>
+          <div><div class="testi-name">Usman Haider</div><div class="testi-loc">Senior Data Engineer, Karachi</div></div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOUNDERS -->
-  <section class="section" style="background:var(--gray-50)">
-    <div class="section-inner">
-      <div class="text-center" style="margin-bottom:56px">
-        <div class="section-badge">👩‍💼 Meet the Team</div>
-        <h2 class="section-title">Learn From <span class="gradient-text">Industry Veterans</span></h2>
-      </div>
-      <div class="grid-3">
-        <div class="card fade-in text-center">
-          <div style="width:80px;height:80px;border-radius:50%;background:var(--blue-50);display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 16px">👩‍💻</div>
-          <h3 style="font-weight:800;font-size:1.1rem;color:var(--gray-900);margin-bottom:4px">Muqadas Bibi</h3>
-          <p style="font-size:.82rem;color:var(--blue-600);font-weight:600;margin-bottom:4px">Co-Founder & Lead Instructor</p>
-          <p style="font-size:.8rem;color:var(--gray-400);margin-bottom:12px">✦ 12+ Years experience</p>
-          <p style="font-size:.88rem;color:var(--gray-500);line-height:1.65;margin-bottom:12px">With over a decade in data engineering and AI implementation across enterprise clients, Muqadas brings unmatched depth to every course she teaches.</p>
-          <span class="chip">Data Engineering</span><span class="chip">AI Systems</span>
-        </div>
-        <div class="card fade-in d1 text-center">
-          <div style="width:80px;height:80px;border-radius:50%;background:var(--blue-50);display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 16px">👩‍🔬</div>
-          <h3 style="font-weight:800;font-size:1.1rem;color:var(--gray-900);margin-bottom:4px">Duaa Ali</h3>
-          <p style="font-size:.82rem;color:var(--blue-600);font-weight:600;margin-bottom:4px">Co-Founder & AI Curriculum Lead</p>
-          <p style="font-size:.8rem;color:var(--gray-400);margin-bottom:12px">✦ 8+ Years experience</p>
-          <p style="font-size:.88rem;color:var(--gray-500);line-height:1.65;margin-bottom:12px">Duaa specializes in Agentic AI and automation workflows, having built AI systems for businesses across multiple sectors with measurable results.</p>
-          <span class="chip">Agentic AI</span><span class="chip">Automation</span>
-        </div>
-        <div class="card fade-in d2 text-center">
-          <div style="width:80px;height:80px;border-radius:50%;background:var(--blue-50);display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 16px">👩‍🏫</div>
-          <h3 style="font-weight:800;font-size:1.1rem;color:var(--gray-900);margin-bottom:4px">Noor Fatima</h3>
-          <p style="font-size:.82rem;color:var(--blue-600);font-weight:600;margin-bottom:4px">Co-Founder & Analytics Expert</p>
-          <p style="font-size:.8rem;color:var(--gray-400);margin-bottom:12px">✦ 7+ Years experience</p>
-          <p style="font-size:.88rem;color:var(--gray-500);line-height:1.65;margin-bottom:12px">Noor's expertise in Power BI and big data analytics has helped hundreds of professionals transition into data-driven roles at top companies.</p>
-          <span class="chip">Power BI</span><span class="chip">Big Data</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE US -->
-  <section class="section">
-    <div class="section-inner">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
-        <div class="fade-left">
-          <div class="section-badge">💡 Why Datamend?</div>
-          <h2 class="section-title">Built for <span class="gradient-text">Real Results</span>,<br>Not Just Certificates</h2>
-          <p class="section-sub">Every course is designed around one question: will this skill get you hired or grow your business?</p>
-        </div>
-        <div class="fade-right">
-          <div class="why-card"><div class="why-icon" style="background:#eff6ff">🏗️</div><div><strong style="display:block;color:var(--gray-900);margin-bottom:4px">Project-Based Learning</strong><span style="font-size:.88rem;color:var(--gray-500)">Every module ends with a real project you can add to your portfolio.</span></div></div>
-          <div class="why-card"><div class="why-icon" style="background:#f0fdf4">🎯</div><div><strong style="display:block;color:var(--gray-900);margin-bottom:4px">Industry-Focused Curriculum</strong><span style="font-size:.88rem;color:var(--gray-500)">Designed in collaboration with hiring managers and business leaders.</span></div></div>
-          <div class="why-card"><div class="why-icon" style="background:#fff7ed">🌱</div><div><strong style="display:block;color:var(--gray-900);margin-bottom:4px">Beginner Friendly</strong><span style="font-size:.88rem;color:var(--gray-500)">Zero assumptions. We start from scratch and take you to advanced.</span></div></div>
-          <div class="why-card"><div class="why-icon" style="background:#fdf4ff">♾️</div><div><strong style="display:block;color:var(--gray-900);margin-bottom:4px">Lifetime Access</strong><span style="font-size:.88rem;color:var(--gray-500)">Pay once, access forever. Including all future course updates.</span></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="cta-band">
-    <h2 class="fade-in">Ready to Transform Your Career?</h2>
-    <p class="fade-in d1">Join 5,000+ students already learning with Datamend.</p>
-    <a href="#" class="btn-white fade-in d2" onclick="showPage('courses');return false">View All Courses →</a>
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <h2>Ready to Start Your AI &amp; Data Journey?</h2>
+  <p>Join 1,000+ students who've transformed their careers with Datamend. Start learning today.</p>
+  <div class="cta-banner-btns">
+    <button class="btn btn-white" onclick="showPage('courses')"><i class="fas fa-play"></i> Explore Courses</button>
+    <a class="btn btn-ghost" href="https://wa.me/923077139942" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
   </div>
 </div>
 
-<!-- ═══════════════════════════════ COURSES PAGE ═══════════════════════════════ -->
-<div id="page-courses" class="page" style="padding-top:70px">
-  <div class="page-header">
-    <div class="page-header-inner">
-      <div class="section-badge">📚 All Courses</div>
-      <h1 class="section-title">Industry-Ready <span class="gradient-text">Data & AI Courses</span></h1>
-      <p class="section-sub mx-auto">Practical, project-based programs designed by industry veterans. Start learning today — at your own pace.</p>
-    </div>
-  </div>
-
-  <section class="section">
-    <div class="section-inner">
-
-      <!-- AI Automation -->
-      <div class="card fade-in" style="margin-bottom:32px;padding:40px">
-        <div class="course-detail-grid">
-          <div>
-            <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
-              <div class="course-icon" style="background:#eff6ff;margin-bottom:0">🤖</div>
-              <div><div class="course-tag">Most Popular</div><h2 class="course-title" style="margin-bottom:0">AI Automation & Agentic AI</h2></div>
-            </div>
-            <p style="color:var(--gray-500);line-height:1.75;margin-bottom:20px">Master AI Agents, Agentic AI systems, and Generative AI — all in one comprehensive program. Build autonomous workflows and real-world AI pipelines that actually deliver business value.</p>
-            <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px">
-              <span style="font-size:.88rem;color:var(--gray-500)">⏱ 12 Weeks</span>
-              <span style="font-size:.88rem;color:var(--gray-500)">📶 Beginner to Advanced</span>
-              <span style="font-size:.88rem;color:var(--gray-500)">👥 2,400+ students</span>
-            </div>
-            <div style="background:var(--gray-50);border-radius:12px;padding:16px 20px;margin-bottom:24px">
-              <div style="font-size:.82rem;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Who Is This For?</div>
-              <p style="font-size:.9rem;color:var(--gray-600)">Developers, business owners, and students eager to lead the AI revolution.</p>
-            </div>
-            <a href="https://wa.me/923077139942?text=Hi! I want to enroll in the AI Automation & Agentic AI course." target="_blank" class="btn-primary">Enroll Now — WhatsApp →</a>
-          </div>
-          <div>
-            <div style="font-weight:700;color:var(--gray-800);margin-bottom:16px;font-size:1rem">🎯 What You'll Learn</div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Build autonomous AI agents from scratch</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Deploy Generative AI applications</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Automate complex multi-step workflows</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Integrate LLMs with real business systems</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Work with AutoGPT, LangChain, CrewAI</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Build no-code automation with Make.com & n8n</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Power BI -->
-      <div class="card fade-in" style="margin-bottom:32px;padding:40px">
-        <div class="course-detail-grid">
-          <div>
-            <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
-              <div class="course-icon" style="background:#f0fdf4;margin-bottom:0">📊</div>
-              <div><div class="course-tag">Business Intelligence</div><h2 class="course-title" style="margin-bottom:0">Power BI Mastery</h2></div>
-            </div>
-            <p style="color:var(--gray-500);line-height:1.75;margin-bottom:20px">Transform raw data into stunning interactive dashboards. Learn DAX, Power Query, and real-world reporting for business decision-making that actually impacts the bottom line.</p>
-            <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px">
-              <span style="font-size:.88rem;color:var(--gray-500)">⏱ 8 Weeks</span>
-              <span style="font-size:.88rem;color:var(--gray-500)">📶 Beginner</span>
-              <span style="font-size:.88rem;color:var(--gray-500)">👥 1,800+ students</span>
-            </div>
-            <div style="background:var(--gray-50);border-radius:12px;padding:16px 20px;margin-bottom:24px">
-              <div style="font-size:.82rem;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Who Is This For?</div>
-              <p style="font-size:.9rem;color:var(--gray-600)">Analysts, managers, and professionals who want to turn data into decisions.</p>
-            </div>
-            <a href="https://wa.me/923077139942?text=Hi! I want to enroll in the Power BI Mastery course." target="_blank" class="btn-primary">Enroll Now — WhatsApp →</a>
-          </div>
-          <div>
-            <div style="font-weight:700;color:var(--gray-800);margin-bottom:16px;font-size:1rem">🎯 What You'll Learn</div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Build stunning interactive dashboards</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Write advanced DAX formulas & measures</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Connect to 50+ data sources</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Create executive-level boardroom reports</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Publish and share via Power BI Service</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Data Engineering -->
-      <div class="card fade-in" style="margin-bottom:32px;padding:40px">
-        <div class="course-detail-grid">
-          <div>
-            <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
-              <div class="course-icon" style="background:#fff7ed;margin-bottom:0">⚙️</div>
-              <div><div class="course-tag">In Demand</div><h2 class="course-title" style="margin-bottom:0">Data Engineering</h2></div>
-            </div>
-            <p style="color:var(--gray-500);line-height:1.75;margin-bottom:20px">Design and build robust data pipelines. Covers ETL processes, cloud data warehouses, Apache Spark, and the modern data stack used at top tech companies worldwide.</p>
-            <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px">
-              <span style="font-size:.88rem;color:var(--gray-500)">⏱ 14 Weeks</span>
-              <span style="font-size:.88rem;color:var(--gray-500)">📶 Intermediate</span>
-              <span style="font-size:.88rem;color:var(--gray-500)">👥 1,200+ students</span>
-            </div>
-            <div style="background:var(--gray-50);border-radius:12px;padding:16px 20px;margin-bottom:24px">
-              <div style="font-size:.82rem;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Who Is This For?</div>
-              <p style="font-size:.9rem;color:var(--gray-600)">Software engineers and analysts who want to move into data engineering roles.</p>
-            </div>
-            <a href="https://wa.me/923077139942?text=Hi! I want to enroll in the Data Engineering course." target="_blank" class="btn-primary">Enroll Now — WhatsApp →</a>
-          </div>
-          <div>
-            <div style="font-weight:700;color:var(--gray-800);margin-bottom:16px;font-size:1rem">🎯 What You'll Learn</div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Design scalable, fault-tolerant data pipelines</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Master Apache Spark & Kafka</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Work with Snowflake & BigQuery</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Build ETL/ELT workflows at scale</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Data quality monitoring & observability</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Big Data -->
-      <div class="card fade-in" style="margin-bottom:32px;padding:40px">
-        <div class="course-detail-grid">
-          <div>
-            <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
-              <div class="course-icon" style="background:#fdf4ff;margin-bottom:0">🌊</div>
-              <div><div class="course-tag">Enterprise Scale</div><h2 class="course-title" style="margin-bottom:0">Big Data Analytics</h2></div>
-            </div>
-            <p style="color:var(--gray-500);line-height:1.75;margin-bottom:20px">Handle petabyte-scale datasets with Hadoop, Spark, and cloud platforms. Learn distributed computing and big data processing as deployed at enterprise level.</p>
-            <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px">
-              <span style="font-size:.88rem;color:var(--gray-500)">⏱ 10 Weeks</span>
-              <span style="font-size:.88rem;color:var(--gray-500)">📶 Intermediate</span>
-              <span style="font-size:.88rem;color:var(--gray-500)">👥 900+ students</span>
-            </div>
-            <div style="background:var(--gray-50);border-radius:12px;padding:16px 20px;margin-bottom:24px">
-              <div style="font-size:.82rem;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Who Is This For?</div>
-              <p style="font-size:.9rem;color:var(--gray-600)">Engineers and data professionals dealing with large-scale data challenges.</p>
-            </div>
-            <a href="https://wa.me/923077139942?text=Hi! I want to enroll in the Big Data Analytics course." target="_blank" class="btn-primary">Enroll Now — WhatsApp →</a>
-          </div>
-          <div>
-            <div style="font-weight:700;color:var(--gray-800);margin-bottom:16px;font-size:1rem">🎯 What You'll Learn</div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Hadoop & HDFS fundamentals</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Apache Spark programming in Python/Scala</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Hive & HBase for big data storage</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Real-time stream processing with Kafka</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Cloud big data platforms (AWS EMR, GCP Dataproc)</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Talend -->
-      <div class="card fade-in" style="margin-bottom:32px;padding:40px">
-        <div class="course-detail-grid">
-          <div>
-            <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
-              <div class="course-icon" style="background:#f0fdfa;margin-bottom:0">🔗</div>
-              <div><div class="course-tag">Enterprise Tool</div><h2 class="course-title" style="margin-bottom:0">Talend Data Integration</h2></div>
-            </div>
-            <p style="color:var(--gray-500);line-height:1.75;margin-bottom:20px">Master Talend Open Studio and Talend Cloud for seamless data integration. Build complex ETL jobs and manage enterprise data flows across systems.</p>
-            <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px">
-              <span style="font-size:.88rem;color:var(--gray-500)">⏱ 8 Weeks</span>
-              <span style="font-size:.88rem;color:var(--gray-500)">📶 Beginner to Intermediate</span>
-              <span style="font-size:.88rem;color:var(--gray-500)">👥 700+ students</span>
-            </div>
-            <div style="background:var(--gray-50);border-radius:12px;padding:16px 20px;margin-bottom:24px">
-              <div style="font-size:.82rem;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Who Is This For?</div>
-              <p style="font-size:.9rem;color:var(--gray-600)">IT professionals and data engineers working in enterprise environments.</p>
-            </div>
-            <a href="https://wa.me/923077139942?text=Hi! I want to enroll in the Talend Data Integration course." target="_blank" class="btn-primary">Enroll Now — WhatsApp →</a>
-          </div>
-          <div>
-            <div style="font-weight:700;color:var(--gray-800);margin-bottom:16px;font-size:1rem">🎯 What You'll Learn</div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Talend Open Studio mastery</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Complex ETL job design & debugging</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Database & REST API integration</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Real-world data migration projects</span></div>
-            <div class="outcome-item"><span class="check-icon">✓</span><span>Talend Cloud deployment & management</span></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="cta-band">
-    <h2>Not Sure Which Course to Pick?</h2>
-    <p>Message us on WhatsApp and our team will help you choose the right path.</p>
-    <a href="https://wa.me/923077139942?text=Hi! I need help choosing a course at Datamend." target="_blank" class="btn-white">💬 Chat With Us on WhatsApp</a>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════ BLOG PAGE ═══════════════════════════════ -->
-<div id="page-blog" class="page" style="padding-top:70px">
-  <div class="page-header">
-    <div class="page-header-inner">
-      <div class="section-badge">📝 Blog & Resources</div>
-      <h1 class="section-title">Learn, Grow & Stay <span class="gradient-text">Ahead of AI</span></h1>
-      <p class="section-sub mx-auto">Expert-written, SEO-optimized articles on AI Agents, Generative AI, Data Engineering, and Automation.</p>
-    </div>
-  </div>
-
-  <section class="section">
-    <div class="section-inner">
-      <div class="grid-2">
-
-        <div class="card fade-in" style="cursor:pointer" onclick="showBlog(1)">
-          <div class="blog-emoji">🤖</div>
-          <div class="blog-cat">AI Agents</div>
-          <h2 class="blog-title">AI Agents Explained: What They Are, How They Work, and Real-Life Examples</h2>
-          <p class="blog-excerpt">AI agents are reshaping how businesses operate — but what exactly are they? Discover everything from simple definitions to real-world use cases in this beginner-friendly guide.</p>
-          <div class="blog-meta"><span>📅 April 15, 2026</span><span>⏱ 7 min read</span></div>
-          <button class="course-cta" style="margin-top:16px">Read Article →</button>
-        </div>
-
-        <div class="card fade-in d1" style="cursor:pointer" onclick="showBlog(2)">
-          <div class="blog-emoji">🧠</div>
-          <div class="blog-cat">Agentic AI</div>
-          <h2 class="blog-title">Agentic AI: The Future of Autonomous Intelligence Explained Simply</h2>
-          <p class="blog-excerpt">Agentic AI goes beyond chatting — it thinks, plans, and acts. Here's a super simple breakdown of what it is, how it differs from regular AI, and why it will change everything.</p>
-          <div class="blog-meta"><span>📅 April 10, 2026</span><span>⏱ 6 min read</span></div>
-          <button class="course-cta" style="margin-top:16px">Read Article →</button>
-        </div>
-
-        <div class="card fade-in d2" style="cursor:pointer" onclick="showBlog(3)">
-          <div class="blog-emoji">✨</div>
-          <div class="blog-cat">Generative AI</div>
-          <h2 class="blog-title">Generative AI Explained: How It Works and Why Everyone Is Talking About It</h2>
-          <p class="blog-excerpt">ChatGPT changed everything — but Generative AI goes way beyond chatbots. Discover what it is, how it creates text, images and code, and how you can profit from it in 2026.</p>
-          <div class="blog-meta"><span>📅 April 5, 2026</span><span>⏱ 8 min read</span></div>
-          <button class="course-cta" style="margin-top:16px">Read Article →</button>
-        </div>
-
-        <div class="card fade-in d3" style="cursor:pointer" onclick="showBlog(4)">
-          <div class="blog-emoji">⚡</div>
-          <div class="blog-cat">AI Automation</div>
-          <h2 class="blog-title">AI Automation: How Businesses Are Saving Time and Millions</h2>
-          <p class="blog-excerpt">Manual processes are bleeding your business of time and money. AI automation is the cure — here's how enterprises are using it to save millions and how you can start today.</p>
-          <div class="blog-meta"><span>📅 March 28, 2026</span><span>⏱ 6 min read</span></div>
-          <button class="course-cta" style="margin-top:16px">Read Article →</button>
-        </div>
-
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ═══════════════════════════════ BLOG DETAIL PAGE ═══════════════════════════════ -->
-<div id="page-blogdetail" class="page" style="padding-top:70px">
-  <div style="background:var(--gray-50);padding:32px 24px 0;max-width:1200px;margin:0 auto">
-    <button class="back-btn" onclick="showPage('blog')">← Back to Blog</button>
-  </div>
-  <div id="blog-detail-content"></div>
-</div>
-
-<!-- ═══════════════════════════════ CONTACT PAGE ═══════════════════════════════ -->
-<div id="page-contact" class="page" style="padding-top:70px">
-  <div class="page-header">
-    <div class="page-header-inner">
-      <div class="section-badge">📬 Get In Touch</div>
-      <h1 class="section-title">We'd Love to <span class="gradient-text">Hear From You</span></h1>
-      <p class="section-sub mx-auto">Have questions about our courses? Ready to enroll? Reach out — we respond within 24 hours.</p>
-    </div>
-  </div>
-
-  <section class="section">
-    <div class="section-inner">
-      <div class="contact-grid">
-        <!-- INFO -->
-        <div class="fade-left">
-          <h2 style="font-size:1.5rem;font-weight:800;color:var(--gray-900);margin-bottom:32px">Contact Information</h2>
-
-          <div class="contact-info-item">
-            <div class="contact-icon-box">📍</div>
-            <div><div style="font-size:.78rem;font-weight:600;color:var(--gray-400);text-transform:uppercase;margin-bottom:2px">Address</div><div style="color:var(--gray-700);font-weight:500">Islamabad, Pakistan</div></div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-icon-box">💬</div>
-            <div><div style="font-size:.78rem;font-weight:600;color:var(--gray-400);text-transform:uppercase;margin-bottom:2px">WhatsApp</div><a href="https://wa.me/923077139942" target="_blank" style="color:var(--blue-600);font-weight:600;text-decoration:none">+92 307 713 9942</a></div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-icon-box">✉️</div>
-            <div><div style="font-size:.78rem;font-weight:600;color:var(--gray-400);text-transform:uppercase;margin-bottom:2px">Email</div><a href="mailto:info@datamend.com" style="color:var(--blue-600);font-weight:600;text-decoration:none">info@datamend.com</a></div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-icon-box">🕐</div>
-            <div><div style="font-size:.78rem;font-weight:600;color:var(--gray-400);text-transform:uppercase;margin-bottom:2px">Response Time</div><div style="color:var(--gray-700);font-weight:500">Within 24 hours</div></div>
-          </div>
-
-          <a href="https://wa.me/923077139942?text=Hi Datamend! I'd like to know more about your courses." target="_blank" class="btn-primary" style="margin-top:8px">💬 Chat on WhatsApp</a>
-
-          <div class="map-placeholder">
-            <div style="font-size:2rem">🗺️</div>
-            <div style="font-weight:600;color:var(--gray-600)">Islamabad, Pakistan</div>
-            <div style="font-size:.82rem;color:var(--gray-400)">Datamend Learning Center</div>
-          </div>
-        </div>
-
-        <!-- FORM -->
-        <div class="card fade-right" style="padding:40px">
-          <div id="form-area">
-            <h2 style="font-size:1.3rem;font-weight:800;color:var(--gray-900);margin-bottom:24px">Send Us a Message</h2>
-            <div class="form-group">
-              <label>Full Name *</label>
-              <input type="text" id="f-name" placeholder="Your full name"/>
-            </div>
-            <div class="form-group">
-              <label>Email Address *</label>
-              <input type="email" id="f-email" placeholder="your@email.com"/>
-            </div>
-            <div class="form-group">
-              <label>Subject</label>
-              <input type="text" id="f-subject" placeholder="Course inquiry, general question..."/>
-            </div>
-            <div class="form-group">
-              <label>Message *</label>
-              <textarea id="f-message" rows="5" placeholder="Tell us how we can help..."></textarea>
-            </div>
-            <button class="btn-primary" style="width:100%;justify-content:center" onclick="submitForm()">Send Message →</button>
-          </div>
-          <div id="form-success" class="success-box" style="display:none">
-            <div style="font-size:3rem;margin-bottom:16px">🎉</div>
-            <h3 style="font-weight:800;font-size:1.3rem;color:var(--gray-900);margin-bottom:8px">Message Sent!</h3>
-            <p style="color:var(--gray-500);margin-bottom:24px">We'll get back to you within 24 hours. Check your email or WhatsApp!</p>
-            <button class="btn-primary" onclick="resetForm()">Send Another →</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">Datamend</div>
-        <p class="footer-desc">Expertise that Deliver. Pakistan's leading platform for AI, data engineering, and automation education. Transforming careers since 2022.</p>
-        <div class="footer-socials">
-          <a href="#" class="social-btn">𝕏</a>
-          <a href="#" class="social-btn">in</a>
-          <a href="#" class="social-btn">📘</a>
-          <a href="#" class="social-btn">▶</a>
-          <a href="https://wa.me/923077139942" target="_blank" class="social-btn" style="color:#25D366">💬</a>
-        </div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo" onclick="showPage('home')">
+        <span class="footer-logo-name">Data<span style="color:#60a5fa">Mend</span></span>
       </div>
-      <div class="footer-col">
-        <h4>Pages</h4>
-        <ul>
-          <li><button onclick="showPage('home')">Home</button></li>
-          <li><button onclick="showPage('courses')">Courses</button></li>
-          <li><button onclick="showPage('blog')">Blog</button></li>
-          <li><button onclick="showPage('contact')">Contact</button></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Courses</h4>
-        <ul>
-          <li><button onclick="showPage('courses')">AI Automation</button></li>
-          <li><button onclick="showPage('courses')">Power BI</button></li>
-          <li><button onclick="showPage('courses')">Data Engineering</button></li>
-          <li><button onclick="showPage('courses')">Big Data</button></li>
-          <li><button onclick="showPage('courses')">Talend</button></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:info@datamend.com">info@datamend.com</a></li>
-          <li><a href="https://wa.me/923077139942" target="_blank">+92 307 713 9942</a></li>
-          <li><span style="font-size:.88rem">Islamabad, Pakistan</span></li>
-        </ul>
+      <p>Pakistan's leading AI &amp; Data education platform. Practical skills. Real projects. Career transformation.</p>
+      <div class="social-row">
+        <a class="social-a" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="social-a" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="social-a" href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a class="social-a" href="https://wa.me/923077139942" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a class="social-a" href="#"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Datamend. All rights reserved.</span>
-      <span>Made with ❤️ in Pakistan 🇵🇰</span>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><button onclick="showPage('home')"><i class="fas fa-chevron-right" style="font-size:.65rem"></i>Home</button></li>
+        <li><button onclick="showPage('courses')"><i class="fas fa-chevron-right" style="font-size:.65rem"></i>Courses</button></li>
+        <li><button onclick="showPage('blog')"><i class="fas fa-chevron-right" style="font-size:.65rem"></i>Blog</button></li>
+        <li><button onclick="showPage('contact')"><i class="fas fa-chevron-right" style="font-size:.65rem"></i>Contact Us</button></li>
+      </ul>
     </div>
+    <div class="footer-col">
+      <h4>Courses</h4>
+      <ul>
+        <li><button onclick="showPage('courses')"><i class="fas fa-chevron-right" style="font-size:.65rem"></i>AI Automation &amp; Agents</button></li>
+        <li><button onclick="showPage('courses')"><i class="fas fa-chevron-right" style="font-size:.65rem"></i>Power BI</button></li>
+        <li><button onclick="showPage('courses')"><i class="fas fa-chevron-right" style="font-size:.65rem"></i>Data Engineering</button></li>
+        <li><button onclick="showPage('courses')"><i class="fas fa-chevron-right" style="font-size:.65rem"></i>Big Data</button></li>
+        <li><button onclick="showPage('courses')"><i class="fas fa-chevron-right" style="font-size:.65rem"></i>Talend</button></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:info@datamend-intl.com"><i class="fas fa-envelope"></i>info@datamend-intl.com</a></li>
+        <li><a href="https://wa.me/923077139942" target="_blank"><i class="fab fa-whatsapp"></i>+92 307 7139942</a></li>
+        <li><a><i class="fas fa-map-marker-alt"></i>Islamabad, Pakistan</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Datamend. All rights reserved. | <em>Expertise that Delivers</em></span>
+    
   </div>
 </footer>
+</div><!-- /home -->
 
-<script>
-// ─── BLOG CONTENT ────────────────────────────────────────────────────────────
-const blogs = {
-  1:{
-    category:"AI Agents",emoji:"🤖",date:"April 15, 2026",readTime:"7 min read",
-    meta:"Primary Keyword: AI Agents | Secondary: what are AI agents, AI agents examples, AI agents in business",
-    content:`
-      <h1>AI Agents Explained: What They Are, How They Work, and Real-Life Examples</h1>
-      <p style="background:var(--blue-50);border-radius:12px;padding:14px 18px;font-size:.85rem;color:var(--gray-500);margin-bottom:24px">
-        🔍 <strong>SEO Meta Title:</strong> AI Agents Explained: What They Are, How They Work &amp; Real-Life Examples (2026)<br>
-        <strong>Meta Description:</strong> Discover what AI agents are, how they work step-by-step, and real-world examples in business. Learn why AI agents are transforming industries in 2026.
-      </p>
-      <h2>🪝 The Problem Nobody's Talking About</h2>
-      <p>Every morning, thousands of businesses waste millions of hours on repetitive tasks — answering the same customer questions, sorting emails, scheduling meetings, and analyzing data. What if software could not just respond to commands, but actually <em>think, decide, and act</em> on your behalf? That's the promise of <strong>AI agents</strong> — and it's no longer science fiction.</p>
-      <h2>🤖 What Are AI Agents?</h2>
-      <p>An <strong>AI agent</strong> is a software system that can perceive its environment, make decisions, and take actions to achieve a specific goal — often without human intervention. Think of it as a digital employee who can browse the web, write code, send emails, and solve multi-step problems autonomously.</p>
-      <h2>⚙️ How AI Agents Work — Step by Step</h2>
-      <ol>
-        <li><strong>Perceive:</strong> The agent receives input — text, data, images, or signals from its environment.</li>
-        <li><strong>Plan:</strong> It breaks down the goal into smaller subtasks using reasoning capabilities.</li>
-        <li><strong>Act:</strong> The agent executes actions — searching the web, calling APIs, writing code, or sending messages.</li>
-        <li><strong>Observe:</strong> It evaluates the results of its actions and adjusts its plan.</li>
-        <li><strong>Iterate:</strong> This loop repeats until the goal is achieved or a human intervenes.</li>
-      </ol>
-      <h2>🌍 Real-World AI Agent Examples</h2>
-      <h3>1. Customer Service Agents</h3>
-      <p>Companies like Zendesk and Intercom now use AI agents that handle entire customer support conversations — resolving issues, processing refunds, and escalating complex cases to humans automatically.</p>
-      <h3>2. AutoGPT</h3>
-      <p>AutoGPT was one of the first open-source AI agents. Given a goal like "research competitors and write a marketing report," it breaks the task into steps and executes them autonomously — searching the web, taking notes, and compiling results.</p>
-      <h3>3. GitHub Copilot Agent Mode</h3>
-      <p>Microsoft's Copilot can now act as an agent — reading your codebase, identifying bugs, writing fixes, running tests, and submitting pull requests with minimal human input.</p>
-      <h2>💼 Benefits for Businesses</h2>
-      <ul>
-        <li>⚡ Dramatically reduced operational costs</li>
-        <li>🕐 24/7 availability without human fatigue</li>
-        <li>📈 Faster decision-making and execution</li>
-        <li>🔄 Ability to handle thousands of tasks simultaneously</li>
-        <li>🎯 Consistent, error-free execution of repetitive workflows</li>
-      </ul>
-      <h2>🚀 The Future of AI Agents</h2>
-      <p>By 2027, analysts predict that over 80% of enterprise software will include some form of agentic AI. We're moving from AI that <em>assists</em> to AI that <em>acts</em>. Multi-agent systems — where dozens of specialized agents collaborate — are already being used to run entire business functions autonomously.</p>
-      <h2>❓ FAQ: AI Agents</h2>
-      <div class="faq-item"><strong>Q: Are AI agents the same as chatbots?</strong><p>No. Chatbots respond to single inputs. AI agents plan, act, and iterate across multiple steps to complete complex goals.</p></div>
-      <div class="faq-item"><strong>Q: What programming languages are used for AI agents?</strong><p>Python is the most popular, with frameworks like LangChain, CrewAI, and AutoGen leading the space.</p></div>
-      <div class="faq-item"><strong>Q: Are AI agents safe?</strong><p>With proper guardrails and human-in-the-loop systems, yes. Most enterprise deployments include approval steps for critical actions.</p></div>
-      <div class="faq-item"><strong>Q: Can small businesses use AI agents?</strong><p>Absolutely! Tools like Make.com, Zapier AI, and n8n make agentic automation accessible without coding knowledge.</p></div>
-      <div class="faq-item"><strong>Q: How much does it cost to build an AI agent?</strong><p>Costs range from free (open-source) to enterprise pricing. Cloud API usage (like OpenAI) is typically the main ongoing expense.</p></div>
-    `
-  },
-  2:{
-    category:"Agentic AI",emoji:"🧠",date:"April 10, 2026",readTime:"6 min read",
-    meta:"Primary Keyword: Agentic AI | Secondary: what is agentic AI, agentic AI vs AI agents",
-    content:`
-      <h1>Agentic AI: The Future of Autonomous Intelligence Explained Simply</h1>
-      <p style="background:var(--blue-50);border-radius:12px;padding:14px 18px;font-size:.85rem;color:var(--gray-500);margin-bottom:24px">
-        🔍 <strong>Meta Title:</strong> Agentic AI: The Future of Autonomous Intelligence Explained Simply<br>
-        <strong>Meta Description:</strong> What is Agentic AI? Learn the difference between AI, Generative AI, and Agentic AI with simple real-life examples.
-      </p>
-      <h2>What is Agentic AI? (Let's Start Simple)</h2>
-      <p>Imagine you asked a very smart helper to "plan your entire week." A normal AI assistant might give you a suggestion. But an <strong>Agentic AI</strong> would actually <em>do it</em> — check your calendar, book meetings, reschedule conflicts, and send confirmation emails — all without asking you every step.</p>
-      <h2>AI vs Generative AI vs Agentic AI — What's the Difference?</h2>
-      <table>
-        <thead><tr><th>Type</th><th>What it does</th><th>Example</th></tr></thead>
-        <tbody>
-          <tr><td>Traditional AI</td><td>Follows fixed rules, classifies data</td><td>Spam filter, recommendation engine</td></tr>
-          <tr><td>Generative AI</td><td>Creates content (text, images, code)</td><td>ChatGPT, Midjourney, GitHub Copilot</td></tr>
-          <tr><td>Agentic AI</td><td>Plans, acts, and completes goals autonomously</td><td>AutoGPT, Devin, AI customer service agents</td></tr>
-        </tbody>
-      </table>
-      <h2>Real-Life Examples of Agentic AI</h2>
-      <ul>
-        <li>🛒 <strong>E-commerce:</strong> An agent that monitors inventory, detects low stock, places supplier orders, and updates your website automatically.</li>
-        <li>💼 <strong>HR Automation:</strong> An agent that screens resumes, schedules interviews, and sends rejection/acceptance emails.</li>
-        <li>📰 <strong>Content Marketing:</strong> An agent that researches trending topics, writes articles, optimizes for SEO, and publishes to your blog.</li>
-        <li>💰 <strong>Finance:</strong> An agent that monitors market signals, executes trades based on your strategy, and generates daily reports.</li>
-      </ul>
-      <h2>Why Does Agentic AI Matter?</h2>
-      <p>We are at the threshold of a major shift. For decades, computers have been tools we operate. With agentic AI, computers become <strong>collaborators</strong> — capable of pursuing goals, making judgment calls, and operating complex systems independently.</p>
-      <h2>Future Scope</h2>
-      <p>By 2030, agentic AI is expected to handle over 30% of all knowledge work. Professionals who know how to build and manage AI agents will be among the most sought-after in the job market globally.</p>
-      <h2>❓ FAQ: Agentic AI</h2>
-      <div class="faq-item"><strong>Q: Is Agentic AI the same as AI agents?</strong><p>Closely related but not identical. "AI agents" refers to the individual systems, while "Agentic AI" describes the broader paradigm of autonomous, goal-directed AI behavior.</p></div>
-      <div class="faq-item"><strong>Q: Do I need coding skills to use Agentic AI?</strong><p>Not always. No-code platforms like Make.com and Zapier AI allow non-developers to create agentic workflows.</p></div>
-      <div class="faq-item"><strong>Q: Is Agentic AI dangerous?</strong><p>Like any powerful technology, it needs responsible design. Current best practices include human oversight, clear scope limits, and audit trails.</p></div>
-      <div class="faq-item"><strong>Q: What companies are leading in Agentic AI?</strong><p>OpenAI, Anthropic, Google DeepMind, Microsoft, and a growing ecosystem of startups are all advancing agentic capabilities.</p></div>
-      <div class="faq-item"><strong>Q: How can I learn Agentic AI?</strong><p>Datamend's AI Automation course covers agentic AI from fundamentals to deployment. Perfect for beginners!</p></div>
-    `
-  },
-  3:{
-    category:"Generative AI",emoji:"✨",date:"April 5, 2026",readTime:"8 min read",
-    meta:"Primary Keyword: Generative AI | Secondary: what is generative AI, generative AI examples",
-    content:`
-      <h1>Generative AI Explained: How It Works and Why Everyone Is Talking About It</h1>
-      <p style="background:var(--blue-50);border-radius:12px;padding:14px 18px;font-size:.85rem;color:var(--gray-500);margin-bottom:24px">
-        🔍 <strong>Meta Title:</strong> Generative AI Explained: How It Works and Why Everyone Is Talking About It<br>
-        <strong>Meta Description:</strong> What is Generative AI? Learn how ChatGPT, Midjourney and other tools work, the benefits, risks, and how to make money with Generative AI in 2026.
-      </p>
-      <h2>Why Is Everyone Suddenly Talking About AI?</h2>
-      <p>In November 2022, ChatGPT launched and hit 1 million users in 5 days. By 2024, it had over 200 million users. Businesses scrambled. Jobs changed. Entire industries were disrupted — almost overnight. At the center of this revolution is <strong>Generative AI</strong>.</p>
-      <h2>What is Generative AI?</h2>
-      <p><strong>Generative AI</strong> refers to artificial intelligence systems that can <em>create</em> new content — text, images, audio, video, and code — based on patterns learned from vast amounts of training data. Unlike traditional AI that classifies or predicts, generative AI produces something genuinely new.</p>
-      <h2>Famous Examples of Generative AI Tools</h2>
-      <ul>
-        <li>💬 <strong>ChatGPT / Claude</strong> — conversational AI for writing, analysis, coding</li>
-        <li>🎨 <strong>Midjourney / DALL-E</strong> — text-to-image generation</li>
-        <li>💻 <strong>GitHub Copilot</strong> — AI-powered code generation</li>
-        <li>🎵 <strong>Suno / Udio</strong> — AI music generation</li>
-        <li>🎥 <strong>Sora / Runway</strong> — AI video generation</li>
-      </ul>
-      <h2>How Does Generative AI Actually Work?</h2>
-      <p>Most modern Generative AI is powered by <strong>Large Language Models (LLMs)</strong> — neural networks trained on hundreds of billions of text examples. They learn statistical patterns and predict the most likely useful continuation of any prompt. Image generators use <strong>diffusion models</strong> — starting with random noise and iteratively refining it into a coherent image.</p>
-      <h2>How to Make Money with Generative AI in 2026</h2>
-      <ol>
-        <li><strong>AI Content Creation:</strong> Blogs, social media, email newsletters for clients</li>
-        <li><strong>AI Image &amp; Design:</strong> Sell on stock platforms or create for clients</li>
-        <li><strong>Prompt Engineering:</strong> Sell effective prompts on marketplaces</li>
-        <li><strong>AI-Powered SaaS:</strong> Build niche tools using AI APIs</li>
-        <li><strong>AI Consulting:</strong> Help businesses implement AI workflows</li>
-      </ol>
-      <h2>Benefits &amp; Risks</h2>
-      <ul>
-        <li>✅ 10x productivity for writers, developers, and marketers</li>
-        <li>✅ Makes professional-quality output accessible to everyone</li>
-        <li>⚠️ Can produce inaccurate information ("hallucinations")</li>
-        <li>⚠️ Copyright and intellectual property questions remain unsettled</li>
-      </ul>
-      <h2>❓ FAQ: Generative AI</h2>
-      <div class="faq-item"><strong>Q: Is Generative AI the same as ChatGPT?</strong><p>ChatGPT is one application of Generative AI. Generative AI is the broader category that includes image generators, music AI, video AI, and more.</p></div>
-      <div class="faq-item"><strong>Q: Can Generative AI replace human creativity?</strong><p>It can augment and accelerate creativity dramatically, but human judgment and emotional intelligence remain essential for truly great work.</p></div>
-      <div class="faq-item"><strong>Q: Is it legal to sell AI-generated content?</strong><p>Generally yes, but check terms of service for each tool and stay updated on evolving copyright law in your jurisdiction.</p></div>
-      <div class="faq-item"><strong>Q: Do I need technical skills to use Generative AI?</strong><p>No. Most tools are designed for everyday users. Learning prompt engineering basics dramatically improves your results.</p></div>
-      <div class="faq-item"><strong>Q: Which tool should I start with?</strong><p>Start with ChatGPT or Claude for text tasks, Midjourney for images. Master one tool deeply before expanding.</p></div>
-    `
-  },
-  4:{
-    category:"AI Automation",emoji:"⚡",date:"March 28, 2026",readTime:"6 min read",
-    meta:"Primary Keyword: AI Automation | Secondary: business automation with AI, AI tools for business",
-    content:`
-      <h1>AI Automation: How Businesses Are Saving Time and Millions</h1>
-      <p style="background:var(--blue-50);border-radius:12px;padding:14px 18px;font-size:.85rem;color:var(--gray-500);margin-bottom:24px">
-        🔍 <strong>Meta Title:</strong> AI Automation: How Businesses Are Saving Time and Millions<br>
-        <strong>Meta Description:</strong> Learn what AI automation is, real business use cases, ROI, top tools, and how to start automating your business with AI today.
-      </p>
-      <h2>The Hidden Cost of Manual Work</h2>
-      <p>A mid-sized company with 200 employees spends an estimated 40,000 hours per year on purely repetitive tasks — data entry, email sorting, report generation, appointment scheduling. That's roughly $2 million in wasted labor annually. <strong>AI automation</strong> is ending this waste.</p>
-      <h2>What is AI Automation?</h2>
-      <p>AI automation combines artificial intelligence (machine learning, NLP, computer vision) with workflow automation tools to handle tasks that previously required human judgment. Unlike traditional rule-based automation (RPA), AI automation can handle unstructured data, make decisions in ambiguous situations, and improve over time.</p>
-      <h2>Real Business Use Cases</h2>
-      <h3>📧 Email &amp; Communication</h3>
-      <p>AI reads incoming emails, categorizes them, drafts responses, and routes complex issues to the right person. Companies report 60–70% reduction in email handling time.</p>
-      <h3>📊 Data Processing &amp; Reporting</h3>
-      <p>AI agents pull data from multiple sources, clean it, analyze it, and generate executive dashboards — tasks that used to take analysts days now complete in minutes.</p>
-      <h3>💰 Finance &amp; Accounting</h3>
-      <p>Invoice processing, expense categorization, fraud detection, and financial reporting are being fully automated with AI accuracy rates exceeding 99%.</p>
-      <h2>ROI and Benefits</h2>
-      <ul>
-        <li>📉 Average 40–60% reduction in operational costs</li>
-        <li>⚡ Tasks completed 10–100x faster</li>
-        <li>✅ 99%+ accuracy in repetitive data tasks</li>
-        <li>📈 Employees refocused on high-value strategic work</li>
-        <li>🌙 24/7 operations without overtime costs</li>
-      </ul>
-      <h2>Top AI Automation Tools</h2>
-      <ul>
-        <li><strong>Make.com</strong> — visual workflow automation with AI steps</li>
-        <li><strong>n8n</strong> — open-source automation with AI integration</li>
-        <li><strong>Zapier AI</strong> — beginner-friendly automation platform</li>
-        <li><strong>Microsoft Power Automate</strong> — enterprise automation within Microsoft ecosystem</li>
-        <li><strong>LangChain / CrewAI</strong> — building custom AI agent workflows</li>
-      </ul>
-      <h2>How to Start Automating</h2>
-      <ol>
-        <li><strong>Audit:</strong> List your 10 most time-consuming repetitive tasks</li>
-        <li><strong>Prioritize:</strong> Start with high-volume, low-complexity tasks</li>
-        <li><strong>Choose tools:</strong> Match tools to your technical level and budget</li>
-        <li><strong>Build &amp; test:</strong> Start small, measure results, iterate</li>
-        <li><strong>Scale:</strong> Roll out successful automations across your organization</li>
-      </ol>
-      <h2>❓ FAQ: AI Automation</h2>
-      <div class="faq-item"><strong>Q: Is AI automation the same as RPA?</strong><p>No. Traditional RPA follows fixed rules. AI automation uses machine learning to handle judgment calls, unstructured data, and changing conditions.</p></div>
-      <div class="faq-item"><strong>Q: Will AI automation take jobs?</strong><p>It will change many roles. Repetitive tasks will be automated, but demand is surging for people who can build, manage, and optimize AI systems.</p></div>
-      <div class="faq-item"><strong>Q: How long does it take to implement?</strong><p>Simple workflows can be live in days. Complex enterprise systems may take weeks to months. ROI is typically seen within the first quarter.</p></div>
-      <div class="faq-item"><strong>Q: What industries benefit most?</strong><p>Finance, healthcare, e-commerce, marketing, customer service, and logistics are seeing the largest gains from AI automation.</p></div>
-    `
-  }
-};
 
-// ─── PAGE ROUTING ─────────────────────────────────────────────────────────────
-function showPage(name) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-  const pg = document.getElementById('page-' + name);
-  if (pg) pg.classList.add('active');
-  const navEl = document.getElementById('nav-' + (name === 'blogdetail' ? 'blog' : name));
-  if (navEl) navEl.classList.add('active');
-  document.getElementById('navLinks').classList.remove('open');
-  window.scrollTo(0, 0);
-  initObserver();
-}
+<!-- ╔═════════════════════════════════════════════════════╗
+     ║               BLOG PAGE                             ║
+     ╚═════════════════════════════════════════════════════╝ -->
+<div class="page" id="blog">
+<div class="page-hero">
+  <h1>Datamend Blog</h1>
+  <p>Expert insights on AI Agents, Agentic AI, Generative AI, Data Engineering &amp; Automation — written for real people.</p>
+</div>
 
-function showBlog(id) {
-  const b = blogs[id];
-  document.getElementById('blog-detail-content').innerHTML = `
-    <div style="max-width:780px;margin:0 auto;padding:32px 24px 80px">
-      <div style="display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap">
-        <span class="course-tag">${b.category}</span>
-        <span style="font-size:.82rem;color:var(--gray-400)">📅 ${b.date}</span>
-        <span style="font-size:.82rem;color:var(--gray-400)">⏱ ${b.readTime}</span>
+<div id="blogListView">
+  <div class="blog-wrap">
+    <div class="filter-row">
+      <button class="filter-btn active" onclick="filterBlog(this,'all')">All Posts</button>
+      <button class="filter-btn" onclick="filterBlog(this,'ai-agents')">AI Agents</button>
+      <button class="filter-btn" onclick="filterBlog(this,'agentic-ai')">Agentic AI</button>
+      <button class="filter-btn" onclick="filterBlog(this,'gen-ai')">Generative AI</button>
+      <button class="filter-btn" onclick="filterBlog(this,'automation')">AI Automation</button>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card fade-up" data-cat="ai-agents" onclick="openPost('post1')">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe)">🤖</div>
+        <div class="blog-body">
+          <span class="blog-cat">AI Agents</span>
+          <h3>AI Agents Explained: What They Are, How They Work &amp; Real-Life Examples</h3>
+          <p>Discover what AI agents really are, how they plan and act autonomously, and why they're reshaping businesses.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar"></i> April 2026</span><span><i class="fas fa-clock"></i> 8 min read</span></div>
+        </div>
       </div>
-      ${b.content}
-      <div style="margin-top:48px;padding:32px;background:linear-gradient(135deg,var(--blue-600),var(--accent));border-radius:20px;text-align:center">
-        <h3 style="color:white;font-size:1.4rem;font-weight:800;margin-bottom:8px">Ready to Learn?</h3>
-        <p style="color:rgba(255,255,255,.85);margin-bottom:24px">Join Datamend's AI Automation course and build real-world skills today.</p>
-        <a href="https://wa.me/923077139942?text=Hi! I read your blog and want to enroll in a course." target="_blank" class="btn-white">💬 Enroll via WhatsApp</a>
+      <div class="blog-card fade-up" data-cat="ai-agents" onclick="openPost('post2')">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#dcfce7,#a7f3d0)">🌐</div>
+        <div class="blog-body">
+          <span class="blog-cat">AI Agents</span>
+          <h3>Top 10 AI Agents Changing the World in 2026</h3>
+          <p>From AutoGPT to Devin — meet the AI agents rewriting the rules of productivity and automation in 2026.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar"></i> April 2026</span><span><i class="fas fa-clock"></i> 7 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card fade-up" data-cat="agentic-ai" onclick="openPost('post3')">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#f3e8ff,#ddd6fe)">⚡</div>
+        <div class="blog-body">
+          <span class="blog-cat">Agentic AI</span>
+          <h3>Agentic AI: The Future of Autonomous Intelligence Explained Simply</h3>
+          <p>What is Agentic AI and how is it different from regular AI? A beginner-friendly breakdown everyone can understand.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar"></i> March 2026</span><span><i class="fas fa-clock"></i> 7 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card fade-up" data-cat="gen-ai" onclick="openPost('post4')">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#ffedd5,#fde68a)">🔥</div>
+        <div class="blog-body">
+          <span class="blog-cat">Generative AI</span>
+          <h3>Generative AI Explained: How It Works &amp; Why Everyone Is Talking About It</h3>
+          <p>ChatGPT, Midjourney, Gemini — what is generative AI really, and why is it the most disruptive technology since the internet?</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar"></i> March 2026</span><span><i class="fas fa-clock"></i> 8 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card fade-up" data-cat="automation" onclick="openPost('post5')">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#ecfdf5,#6ee7b7)">⚙️</div>
+        <div class="blog-body">
+          <span class="blog-cat">AI Automation</span>
+          <h3>AI Automation: How Businesses Are Saving Time and Millions</h3>
+          <p>Discover how companies are using AI automation to eliminate manual work, cut costs, and scale faster than ever.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar"></i> February 2026</span><span><i class="fas fa-clock"></i> 7 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card fade-up" data-cat="automation" onclick="openPost('post6')">
+        <div class="blog-thumb" style="background:linear-gradient(135deg,#eff6ff,#bfdbfe)">🚀</div>
+        <div class="blog-body">
+          <span class="blog-cat">AI Automation</span>
+          <h3>Beginner's Guide to AI Automation: Start Automating Tasks in 7 Days</h3>
+          <p>A step-by-step 7-day action plan to start automating your daily tasks using AI tools — no coding skills required.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar"></i> January 2026</span><span><i class="fas fa-clock"></i> 6 min read</span></div>
+        </div>
       </div>
     </div>
-  `;
-  showPage('blogdetail');
+  </div>
+</div>
+
+<div id="blogPostView" style="display:none;background:var(--gray-50);min-height:80vh">
+
+<!-- POST 1 -->
+<div id="post1" class="blog-post-content" style="display:none">
+<div class="post-wrap">
+  <button class="back-btn" onclick="closePosts()"><i class="fas fa-arrow-left"></i> Back to Blog</button>
+  <div class="meta-box"><strong>📌 Meta Title:</strong> AI Agents Explained: What They Are, How They Work &amp; Real-Life Examples | Datamend<br><strong>📝 Meta Description:</strong> Learn what AI agents are, how they work step by step, and see real-life examples in business &amp; automation.</div>
+  <span class="blog-cat">AI Agents</span>
+  <h1>AI Agents Explained: What They Are, How They Work, and Real-Life Examples</h1>
+  <div class="meta-chip"><span><i class="fas fa-calendar"></i> April 2026</span><span><i class="fas fa-clock"></i> 8 min read</span><span><i class="fas fa-tag"></i> AI Agents</span></div>
+  <p>Imagine hiring an employee who never sleeps, never gets tired, and can handle 100 tasks simultaneously at perfect accuracy. Welcome to the world of <strong>AI Agents</strong> — one of the most exciting and rapidly evolving technologies of 2026.</p>
+  <h2>What Are AI Agents?</h2>
+  <p>An <strong>AI agent</strong> is a software system that can perceive its environment, make decisions, and take actions to achieve a specific goal — all without constant human input. Unlike a simple chatbot that just answers questions, an AI agent can plan, reason, use tools, and execute multi-step tasks autonomously.</p>
+  <h2>How Do AI Agents Work?</h2>
+  <h3>Step 1: Perception</h3><p>The agent receives input — a text prompt, an email, data from a database, or visual information. It "reads" the full situation before acting.</p>
+  <h3>Step 2: Reasoning &amp; Planning</h3><p>Using a large language model at its core, the agent reasons about what needs to be done and breaks the goal into smaller subtasks.</p>
+  <h3>Step 3: Tool Use</h3><p>AI agents can use external tools: browse the web, read files, write code, send emails, query databases, and interact with APIs.</p>
+  <h3>Step 4: Action &amp; Execution</h3><p>The agent executes each step in sequence, adapting its plan based on results — much like how a human professional adjusts their approach based on real-time feedback.</p>
+  <h3>Step 5: Memory &amp; Learning</h3><p>Advanced agents store context and past learnings, allowing them to improve over time.</p>
+  <h2>Real-World AI Agent Examples</h2>
+  <h3>Customer Service Agents</h3><p>Companies like Klarna use AI agents that handle millions of conversations per month — resolving refunds, tracking orders, and escalating only complex cases to humans.</p>
+  <h3>AutoGPT</h3><p>Give it a goal — like "research the top 5 competitors and write a strategy report" — and it independently searches the web, reads pages, compiles information, and delivers polished output.</p>
+  <h3>Devin: The Coding Agent</h3><p>Devin, developed by Cognition AI, is a software engineering agent that can write, test, and debug complete code based on high-level instructions.</p>
+  <h2>Benefits of AI Agents</h2>
+  <ul>
+    <li><strong>24/7 Operation:</strong> Agents don't sleep — they handle tasks around the clock.</li>
+    <li><strong>Massive Scale:</strong> One agent can do what 10 humans did sequentially.</li>
+    <li><strong>Cost Reduction:</strong> Automating repetitive work cuts operational costs by 20–60%.</li>
+    <li><strong>Speed:</strong> Tasks that take hours are completed in minutes.</li>
+    <li><strong>Consistency:</strong> No human error from tiredness or distraction.</li>
+  </ul>
+  <div class="faq-section">
+    <h2>FAQ</h2>
+    <div class="faq-item"><p class="faq-q">Q: What is the difference between an AI agent and a chatbot?</p><p>A chatbot responds to messages. An AI agent takes autonomous action — it plans, uses tools, executes multi-step tasks, and adapts based on results.</p></div>
+    <div class="faq-item"><p class="faq-q">Q: Do I need coding skills to use AI agents?</p><p>Many modern platforms are no-code or low-code. However, understanding AI fundamentals helps you use and customize agents more effectively.</p></div>
+    <div class="faq-item"><p class="faq-q">Q: Are AI agents safe to use?</p><p>Well-built AI agents have guardrails, permissions, and human-in-the-loop checkpoints. Safety depends entirely on responsible implementation.</p></div>
+    <div class="faq-item"><p class="faq-q">Q: How can I learn to build AI agents?</p><p>Start with foundational AI knowledge, then learn about LLMs, prompt engineering, and frameworks like LangChain and CrewAI. Datamend's AI Automation &amp; Agents course covers all of this.</p></div>
+  </div>
+  <div class="post-cta"><h3>🚀 Ready to Master AI Agents?</h3><p>Join Datamend's AI Automation &amp; Agents course and build real autonomous AI systems from scratch.</p><button class="btn btn-white" onclick="showPage('courses')">Enroll Now <i class="fas fa-arrow-right"></i></button></div>
+</div>
+</div>
+
+<!-- POST 2 -->
+<div id="post2" class="blog-post-content" style="display:none">
+<div class="post-wrap">
+  <button class="back-btn" onclick="closePosts()"><i class="fas fa-arrow-left"></i> Back to Blog</button>
+  <span class="blog-cat">AI Agents</span>
+  <h1>Top 10 AI Agents Changing the World in 2026</h1>
+  <div class="meta-chip"><span><i class="fas fa-calendar"></i> April 2026</span><span><i class="fas fa-clock"></i> 7 min read</span></div>
+  <p>The AI agent revolution is here. These are real tools, deployed today, quietly automating tasks that once required entire teams of humans.</p>
+  <h2>The Top 10 AI Agents of 2026</h2>
+  <h3>1. AutoGPT</h3><p>The original open-source autonomous agent. Give it a goal and it browses the web, writes files, executes code, and iterates completely by itself.</p>
+  <h3>2. Devin (by Cognition AI)</h3><p>The world's first fully autonomous AI software engineer. Devin reads codebases, writes code, runs tests, fixes bugs, and deploys applications.</p>
+  <h3>3. Claude (Anthropic)</h3><p>Claude's API-powered agents excel at long-context reasoning, complex document analysis, and research tasks at massive scale.</p>
+  <h3>4. OpenAI Operator</h3><p>OpenAI's browser-based agent that navigates websites, clicks buttons, fills forms, and completes real-world tasks autonomously.</p>
+  <h3>5. CrewAI</h3><p>A multi-agent framework where specialized AI agents collaborate as a coordinated team — one researches, another writes, a third edits.</p>
+  <h3>6. LangChain Agents</h3><p>The leading developer framework for building custom AI agents connected to databases, APIs, and any tool.</p>
+  <h3>7. Google Gemini Agents</h3><p>Integrates natively with Google Workspace — Docs, Sheets, Gmail — enabling agents that automate email responses and generate reports.</p>
+  <h3>8. Microsoft Copilot Agents</h3><p>Embedded in Microsoft 365, helping write, summarize, and analyze across Word, Excel, and Teams.</p>
+  <h3>9. Perplexity AI</h3><p>A research agent that searches the web in real-time and synthesizes accurate, cited answers far more reliably than a basic search engine.</p>
+  <h3>10. Zapier AI Agents</h3><p>Connects 6,000+ apps with intelligent automation. Non-technical users can set up powerful workflows using plain English.</p>
+  <h2>Comparison Table</h2>
+  <table>
+    <tr><th>Agent</th><th>Best For</th><th>Skill Level</th><th>Earn Money With</th></tr>
+    <tr><td>AutoGPT</td><td>Research &amp; Strategy</td><td>Intermediate</td><td>Freelance reports</td></tr>
+    <tr><td>Devin</td><td>Software development</td><td>Advanced</td><td>Coding projects</td></tr>
+    <tr><td>CrewAI</td><td>Multi-step workflows</td><td>Intermediate</td><td>Agency automation</td></tr>
+    <tr><td>Zapier AI</td><td>Business automation</td><td>Beginner</td><td>Automation services</td></tr>
+    <tr><td>Perplexity</td><td>Research</td><td>Beginner</td><td>Research services</td></tr>
+    <tr><td>Copilot</td><td>Office workflows</td><td>Beginner</td><td>Productivity consulting</td></tr>
+  </table>
+  <div class="faq-section">
+    <h2>FAQ</h2>
+    <div class="faq-item"><p class="faq-q">Q: Which AI agent is best for beginners?</p><p>Zapier AI and Perplexity are the most beginner-friendly. AutoGPT and CrewAI require some technical understanding.</p></div>
+    <div class="faq-item"><p class="faq-q">Q: Can I make money using AI agents?</p><p>Absolutely. Many freelancers offer AI automation services earning $500–$5,000+ per project.</p></div>
+    <div class="faq-item"><p class="faq-q">Q: Are AI agents replacing jobs?</p><p>They're replacing repetitive tasks within jobs, not entire jobs. Professionals who work alongside AI agents will be most valuable.</p></div>
+  </div>
+  <div class="post-cta"><h3>🤖 Learn to Build &amp; Monetize AI Agents</h3><p>Datamend's AI Automation course teaches you how to build, deploy, and earn with AI agents — starting from zero.</p><button class="btn btn-white" onclick="showPage('courses')">Start Learning <i class="fas fa-arrow-right"></i></button></div>
+</div>
+</div>
+
+<!-- POST 3 -->
+<div id="post3" class="blog-post-content" style="display:none">
+<div class="post-wrap">
+  <button class="back-btn" onclick="closePosts()"><i class="fas fa-arrow-left"></i> Back to Blog</button>
+  <span class="blog-cat">Agentic AI</span>
+  <h1>Agentic AI: The Future of Autonomous Intelligence Explained Simply</h1>
+  <div class="meta-chip"><span><i class="fas fa-calendar"></i> March 2026</span><span><i class="fas fa-clock"></i> 7 min read</span></div>
+  <p>There's a new kind of AI that goes far beyond answering questions — it thinks for itself, makes multi-step plans, and takes action in the real world. It's called <strong>Agentic AI</strong>.</p>
+  <h2>What Is Agentic AI?</h2>
+  <p>Agentic AI refers to AI systems that can act autonomously — they don't just respond and stop. They set goals, make plans, use tools, and keep working until the job is done.</p>
+  <p><strong>Simple analogy:</strong> If regular AI is a calculator, Agentic AI is a smart personal assistant who can research, plan your day, book your meeting, and send the follow-up email — completely on their own.</p>
+  <h2>AI vs Generative AI vs Agentic AI</h2>
+  <ul>
+    <li><strong>Regular AI:</strong> Recognizes patterns. Makes predictions, not decisions.</li>
+    <li><strong>Generative AI:</strong> Creates new content — text, images, code. It generates, but waits for your next prompt.</li>
+    <li><strong>Agentic AI:</strong> Acts autonomously. Sets goals, plans solutions, uses tools, executes complex tasks without being prompted for every step.</li>
+  </ul>
+  <h2>Real-Life Examples</h2>
+  <h3>Travel Planning Agent</h3><p>You say: "Plan a 5-day trip to Istanbul for 2 people in June, budget $2,000." The agentic AI searches flights, compares hotels, checks your calendar, books everything, and emails you a complete itinerary.</p>
+  <h3>Business Research Agent</h3><p>A startup founder asks: "Research our top 3 competitors and create a SWOT analysis." The agent browses websites, reads reports, and delivers a formatted document in under 5 minutes.</p>
+  <h2>Why It Matters for Your Future</h2>
+  <p>By 2027, most companies will use some form of agentic AI in their core operations. Understanding how to use, direct, and build these systems will be one of the most valuable skills on the job market.</p>
+  <div class="faq-section">
+    <h2>FAQ</h2>
+    <div class="faq-item"><p class="faq-q">Q: Is Agentic AI safe?</p><p>Well-designed systems include human oversight checkpoints and permission controls.</p></div>
+    <div class="faq-item"><p class="faq-q">Q: Can beginners learn agentic AI?</p><p>Absolutely. Many frameworks are beginner-friendly. Datamend's AI Automation program teaches this from the ground up.</p></div>
+    <div class="faq-item"><p class="faq-q">Q: What tools power agentic AI?</p><p>LangChain, CrewAI, AutoGPT, OpenAI Assistants API, and Anthropic's Claude API are among the most popular frameworks.</p></div>
+  </div>
+  <div class="post-cta"><h3>⚡ Master Agentic AI with Datamend</h3><p>Our AI Automation &amp; Agents course teaches you everything from prompt engineering to building fully autonomous agentic systems.</p><button class="btn btn-white" onclick="showPage('courses')">Join the Course <i class="fas fa-arrow-right"></i></button></div>
+</div>
+</div>
+
+<!-- POST 4 -->
+<div id="post4" class="blog-post-content" style="display:none">
+<div class="post-wrap">
+  <button class="back-btn" onclick="closePosts()"><i class="fas fa-arrow-left"></i> Back to Blog</button>
+  <span class="blog-cat">Generative AI</span>
+  <h1>Generative AI Explained: How It Works and Why Everyone Is Talking About It</h1>
+  <div class="meta-chip"><span><i class="fas fa-calendar"></i> March 2026</span><span><i class="fas fa-clock"></i> 8 min read</span></div>
+  <p>Generative AI had arrived, and it wasn't just a lab experiment anymore. It was in the hands of everyday people. But what exactly is it, how does it work, and why should you care?</p>
+  <h2>What Is Generative AI?</h2>
+  <p>Generative AI is a type of artificial intelligence that creates new content — text, images, audio, video, or code — based on patterns learned from vast amounts of existing data. It doesn't just recognize a cat — it can draw one.</p>
+  <h2>Famous Examples</h2>
+  <ul>
+    <li><strong>ChatGPT:</strong> Writes essays, answers questions, generates code</li>
+    <li><strong>Midjourney:</strong> Creates photorealistic images from text descriptions</li>
+    <li><strong>Gemini:</strong> Multimodal AI working with text, images, and code</li>
+    <li><strong>Claude:</strong> Long-context reasoning and nuanced conversation</li>
+    <li><strong>Sora:</strong> Generates cinematic videos from text prompts</li>
+    <li><strong>GitHub Copilot:</strong> AI pair programmer that writes code as you type</li>
+  </ul>
+  <h2>How Does It Work?</h2>
+  <p>At its core, generative AI is trained on enormous datasets. Through deep learning, it learns statistical patterns of how words, pixels, and concepts relate. When you give it a prompt, it predicts the most contextually appropriate response — word by word, pixel by pixel.</p>
+  <h2>Benefits and Risks</h2>
+  <h3>Benefits</h3>
+  <ul>
+    <li>Massive productivity boost for content creation, coding, and research</li>
+    <li>Democratizes skills — anyone can produce professional-grade content</li>
+    <li>Accelerates innovation across every industry</li>
+  </ul>
+  <h3>Risks</h3>
+  <ul>
+    <li>Misinformation and deepfakes can spread false content</li>
+    <li>Intellectual property concerns around training data</li>
+    <li>Potential job displacement in certain roles</li>
+  </ul>
+  <div class="faq-section">
+    <h2>FAQ</h2>
+    <div class="faq-item"><p class="faq-q">Q: Is generative AI the same as AI?</p><p>No. Generative AI is a specific subset of AI focused on creating new content. AI is a much broader term.</p></div>
+    <div class="faq-item"><p class="faq-q">Q: Can generative AI replace human creativity?</p><p>It can assist and amplify creativity, but the best outcomes come from human-AI collaboration.</p></div>
+  </div>
+  <div class="post-cta"><h3>🔥 Learn Generative AI at Datamend</h3><p>Master generative AI tools and build real applications with step-by-step expert guidance.</p><button class="btn btn-white" onclick="showPage('courses')">Explore Courses <i class="fas fa-arrow-right"></i></button></div>
+</div>
+</div>
+
+<!-- POST 5 -->
+<div id="post5" class="blog-post-content" style="display:none">
+<div class="post-wrap">
+  <button class="back-btn" onclick="closePosts()"><i class="fas fa-arrow-left"></i> Back to Blog</button>
+  <span class="blog-cat">AI Automation</span>
+  <h1>AI Automation: How Businesses Are Saving Time and Millions</h1>
+  <div class="meta-chip"><span><i class="fas fa-calendar"></i> February 2026</span><span><i class="fas fa-clock"></i> 7 min read</span></div>
+  <p>Every minute your team spends on manual data entry or answering repetitive emails is a minute — and a dollar — lost. The businesses that figured this out first discovered <strong>AI automation</strong>.</p>
+  <h2>What Is AI Automation?</h2>
+  <p>AI automation is the use of artificial intelligence to perform tasks that previously required human effort. Unlike basic rule-based automation, AI automation adapts to new inputs, understands context, and makes decisions.</p>
+  <h2>Real Business Use Cases</h2>
+  <h3>Customer Service (Klarna)</h3><p>Klarna deployed an AI customer service agent handling 2.3 million conversations per month — equivalent to 700 full-time agents. Resolution times dropped from 11 minutes to under 2 minutes.</p>
+  <h3>Data Processing</h3><p>Manufacturing companies use AI to automatically extract and process data from invoices and contracts — eliminating weeks of manual entry and reducing errors by over 90%.</p>
+  <h3>HR &amp; Recruitment</h3><p>AI screens hundreds of resumes, schedules interviews, sends communications, and tracks candidate progress automatically.</p>
+  <h2>ROI of AI Automation</h2>
+  <ul>
+    <li>Average cost reduction of 20–40% in automated departments</li>
+    <li>Processing speed 10–100× faster than human execution</li>
+    <li>Error rates reduced by 80–95% across automated workflows</li>
+  </ul>
+  <h2>Popular Tools</h2>
+  <ul>
+    <li><strong>Zapier:</strong> Connect 6,000+ apps with intelligent automation — no code needed</li>
+    <li><strong>Make:</strong> Visual workflow automation with advanced AI integrations</li>
+    <li><strong>n8n:</strong> Open-source automation platform with powerful LLM integrations</li>
+    <li><strong>Power Automate:</strong> Microsoft's automation suite for Office 365</li>
+  </ul>
+  <div class="faq-section">
+    <h2>FAQ</h2>
+    <div class="faq-item"><p class="faq-q">Q: Do I need coding skills for AI automation?</p><p>Not necessarily. Tools like Zapier and Make are no-code. However, coding unlocks far more powerful capabilities.</p></div>
+    <div class="faq-item"><p class="faq-q">Q: How long does it take to see ROI?</p><p>Most businesses see measurable ROI within 30–90 days of implementing even basic automation workflows.</p></div>
+  </div>
+  <div class="post-cta"><h3>💡 Master AI Automation with Datamend</h3><p>Our AI Automation course teaches you to build real automation systems for real business problems.</p><button class="btn btn-white" onclick="showPage('courses')">Enroll Today <i class="fas fa-arrow-right"></i></button></div>
+</div>
+</div>
+
+<!-- POST 6 -->
+<div id="post6" class="blog-post-content" style="display:none">
+<div class="post-wrap">
+  <button class="back-btn" onclick="closePosts()"><i class="fas fa-arrow-left"></i> Back to Blog</button>
+  <span class="blog-cat">AI Automation</span>
+  <h1>Beginner's Guide to AI Automation: Start Automating Tasks in 7 Days</h1>
+  <div class="meta-chip"><span><i class="fas fa-calendar"></i> January 2026</span><span><i class="fas fa-clock"></i> 6 min read</span></div>
+  <p>You don't need to be a developer. In just 7 days, following this step-by-step action plan, you can start automating real tasks using AI tools available right now — many of them free.</p>
+  <h2>Day 1: Identify What to Automate</h2><p>Spend 30 minutes listing every repetitive task in your work or daily life. Email responses, data entry, scheduling, report creation — write them all down. Circle the top 3 that waste the most time each week.</p>
+  <h2>Day 2: Set Up Your First Automation Tool</h2><p>Create a free account on <strong>Zapier</strong> or <strong>Make.com</strong>. Browse pre-built templates — there are thousands of ready-made workflows you can activate with one click.</p>
+  <h2>Day 3: Automate Your Email</h2><p>Set up an AI-powered email categorizer and responder. Use Zapier + Gmail + ChatGPT to automatically sort incoming emails and draft responses for common queries.</p>
+  <h2>Day 4: Automate Data Entry</h2><p>If you regularly copy data between places, set up a Zapier workflow to handle it automatically. Connect your form tool directly to your spreadsheet.</p>
+  <h2>Day 5: Automate Social Media</h2><p>Use Buffer or Hootsuite with AI content generation to create and schedule an entire week of posts in under an hour.</p>
+  <h2>Day 6: Build Your Custom AI Assistant</h2><p>Use ChatGPT Custom GPTs or Claude Projects to create a personal AI assistant trained on your documents and preferences.</p>
+  <h2>Day 7: Review, Measure &amp; Expand</h2><p>Review everything you built this week. Calculate hours saved. Identify the next 3 processes to automate.</p>
+  <h2>✅ Your 7-Day Checklist</h2>
+  <ul>
+    <li>☐ Listed top 3 most time-consuming repetitive tasks</li>
+    <li>☐ Created a Zapier or Make.com account</li>
+    <li>☐ Set up at least one email automation workflow</li>
+    <li>☐ Automated at least one data entry process</li>
+    <li>☐ Scheduled social media content for the week</li>
+    <li>☐ Built a custom AI assistant for your use case</li>
+    <li>☐ Measured time saved and documented next steps</li>
+  </ul>
+  <div class="post-cta"><h3>🚀 Take Your Automation Skills Further</h3><p>Datamend's AI Automation course takes you from basics to building powerful multi-agent autonomous systems.</p><button class="btn btn-white" onclick="showPage('courses')">Join Datamend <i class="fas fa-arrow-right"></i></button></div>
+</div>
+</div>
+
+</div><!-- /blogPostView -->
+
+<footer style="background:var(--gray-900);color:rgba(255,255,255,.55);padding:32px 28px;text-align:center;font-size:.82rem">
+  © 2026 Datamend — Expertise that Delivers |
+  <button onclick="showPage('home')" style="background:none;border:none;color:#3b8ef0;cursor:pointer;font-size:.82rem">Home</button>
+</footer>
+</div><!-- /blog -->
+
+
+<!-- ╔═════════════════════════════════════════════════════╗
+     ║             CONTACT PAGE                            ║
+     ╚═════════════════════════════════════════════════════╝ -->
+<div class="page" id="contact">
+<div class="page-hero">
+  <h1>Contact Datamend</h1>
+  <p>Have a question about a course or need guidance on which program is right for you? We're here to help — always.</p>
+</div>
+<section style="background:var(--gray-50);padding:64px 28px">
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <h2>Get In Touch</h2>
+      <p>Whether you're curious about a course, need guidance on the best learning path, or want to discuss corporate training — our team responds within 24 hours.</p>
+      <div class="c-item fade-up d1"><div class="c-ico"><i class="fas fa-map-marker-alt"></i></div><div><h4>Office Address</h4><p>Islamabad, Pakistan</p></div></div>
+      <div class="c-item fade-up d2"><div class="c-ico"><i class="fab fa-whatsapp"></i></div><div><h4>WhatsApp (Fastest Response)</h4><p><a href="https://wa.me/923077139942" target="_blank">+92 307 7139942</a></p></div></div>
+      <div class="c-item fade-up d3"><div class="c-ico"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><p><a href="mailto:info@datamend.com">info@datamend.com</a></p></div></div>
+      <div class="c-item fade-up d4"><div class="c-ico"><i class="fas fa-clock"></i></div><div><h4>Response Time</h4><p>WhatsApp: within 2 hrs &nbsp;|&nbsp; Email: within 24 hrs</p></div></div>
+      <div class="map-box fade-up"><i class="fas fa-map-marked-alt"></i><p>Islamabad, Pakistan</p><small style="color:var(--gray-500);font-size:.78rem">F-10 Markaz Area</small></div>
+    </div>
+    <div class="contact-form-card fade-up d2">
+      <h3>Send Us a Message</h3>
+      <div class="fg"><label>Full Name *</label><input type="text" id="cName" placeholder="Your full name"></div>
+      <div class="fg"><label>Email Address *</label><input type="email" id="cEmail" placeholder="your@email.com"></div>
+      <div class="fg">
+        <label>Interested In</label>
+        <select id="cCourse">
+          <option value="">Select a course (optional)</option>
+          <option>AI Automation &amp; Agents</option>
+          <option>Power BI</option>
+          <option>Data Engineering</option>
+          <option>Big Data</option>
+          <option>Talend</option>
+          <option>General Inquiry</option>
+          <option>Corporate Training</option>
+        </select>
+      </div>
+      <div class="fg"><label>Message *</label><textarea id="cMsg" placeholder="Tell us how we can help you..."></textarea></div>
+      <button class="btn-submit" onclick="submitForm()"><i class="fas fa-paper-plane"></i> Send Message</button>
+      <div class="success-msg" id="successMsg"><i class="fas fa-check-circle"></i> Thank you! We'll get back to you within 24 hours. For faster support, WhatsApp us!</div>
+    </div>
+  </div>
+</section>
+<footer style="background:var(--gray-900);color:rgba(255,255,255,.55);padding:32px 28px;text-align:center;font-size:.82rem">
+  © 2026 Datamend — Expertise that Delivers |
+  <button onclick="showPage('home')" style="background:none;border:none;color:#3b8ef0;cursor:pointer;font-size:.82rem">Home</button>
+</footer>
+</div><!-- /contact -->
+
+
+<!-- ╔═════════════════════════════════════════════════════╗
+     ║              COURSES PAGE                           ║
+     ╚═════════════════════════════════════════════════════╝ -->
+<div class="page" id="courses">
+<div class="page-hero">
+  <h1>Our Courses</h1>
+  <p>Practical, industry-ready programs taught by experts with 12+ years of real-world experience. Start from zero — graduate job-ready.</p>
+</div>
+<section style="background:var(--gray-50);padding:64px 28px">
+<div class="courses-pg-wrap">
+
+  <div class="course-detail-card fade-up d1">
+    <div class="cd-header" style="background:linear-gradient(135deg,#1251a8,#1a6ed8)">
+      <div class="cd-icon"><i class="fas fa-robot"></i></div>
+      <div><h2>AI Automation, Agents &amp; Agentic AI (All-in-One)</h2><p>The most comprehensive AI course in Pakistan — covering Agents, Agentic AI, and Generative AI in one complete program.</p></div>
+    </div>
+    <div class="cd-body">
+      <p>This is Datamend's flagship course, designed for anyone who wants to master the complete AI automation stack. You'll learn how to build AI agents, design agentic workflows, and leverage generative AI models to create powerful automation systems used by leading companies worldwide.</p>
+      <h3 style="margin-bottom:14px">What You Will Learn</h3>
+      <div class="learn-grid">
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Build autonomous AI agents with LangChain &amp; CrewAI</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Understand Agentic AI architecture and design patterns</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Work with GPT-4, Claude, and Gemini APIs</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Master prompt engineering and chain-of-thought techniques</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Build multi-agent collaborative systems</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Deploy AI automation to real business workflows</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> RAG (Retrieval Augmented Generation) systems</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Fine-tune models for specific business use cases</div>
+      </div>
+      <div class="tags-row"><span class="tag">Beginner to Advanced</span><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">OpenAI API</span><span class="tag">CrewAI</span><span class="tag">AutoGPT</span><span class="tag">Generative AI</span></div>
+      <h3 style="margin-bottom:10px">Who Is This For?</h3>
+      <p>Students, freelancers, developers, business owners, and professionals who want to build, use, and monetize AI automation systems — no prior AI experience required.</p>
+      <div class="cd-footer">
+        <div class="cd-meta"><span><i class="fas fa-clock"></i> 10–12 Weeks</span><span><i class="fas fa-signal"></i> All Levels</span><span><i class="fas fa-video"></i> Live + Recorded</span><span><i class="fas fa-certificate"></i> Certificate</span></div>
+        <button class="btn-enroll" onclick="enrollNow('AI Automation & Agents')"><i class="fas fa-graduation-cap"></i> Enroll Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-detail-card fade-up d2">
+    <div class="cd-header" style="background:linear-gradient(135deg,#92400e,#d97706)">
+      <div class="cd-icon"><i class="fas fa-chart-bar"></i></div>
+      <div><h2>Power BI — Data Visualization &amp; Business Intelligence</h2><p>Master Power BI and transform raw data into compelling dashboards that drive real business decisions.</p></div>
+    </div>
+    <div class="cd-body">
+      <p>Power BI is the #1 business intelligence tool used by enterprises worldwide. This course takes you from zero to building stunning interactive dashboards that decision-makers rely on daily.</p>
+      <h3 style="margin-bottom:14px">What You Will Learn</h3>
+      <div class="learn-grid">
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Connect to 100+ data sources</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Data transformation with Power Query</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> DAX formulas, measures &amp; calculated columns</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Build interactive dashboards &amp; reports</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Advanced visualizations and custom charts</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Row-level security, sharing &amp; publishing</div>
+      </div>
+      <div class="tags-row"><span class="tag">Beginner Friendly</span><span class="tag">Power BI Desktop</span><span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">Excel Integration</span></div>
+      <h3 style="margin-bottom:10px">Who Is This For?</h3>
+      <p>Business analysts, managers, finance professionals, and anyone who works with data and wants to communicate insights visually and powerfully.</p>
+      <div class="cd-footer">
+        <div class="cd-meta"><span><i class="fas fa-clock"></i> 6–8 Weeks</span><span><i class="fas fa-signal"></i> Beginner</span><span><i class="fas fa-certificate"></i> Certificate</span></div>
+        <button class="btn-enroll" style="background:#d97706" onclick="enrollNow('Power BI')"><i class="fas fa-graduation-cap"></i> Enroll Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-detail-card fade-up d3">
+    <div class="cd-header" style="background:linear-gradient(135deg,#065f46,#16a34a)">
+      <div class="cd-icon"><i class="fas fa-database"></i></div>
+      <div><h2>Data Engineering — Pipelines, Warehouses &amp; Architecture</h2><p>Build the infrastructure that powers modern data-driven companies — the backbone of every AI system.</p></div>
+    </div>
+    <div class="cd-body">
+      <p>Data engineers are among the highest-paid professionals in tech globally. This course teaches you how to design, build, and maintain data systems that organizations depend on.</p>
+      <h3 style="margin-bottom:14px">What You Will Learn</h3>
+      <div class="learn-grid">
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Design scalable data pipeline architectures</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> ETL/ELT workflows with Apache Airflow</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Cloud data warehouses (Snowflake, BigQuery)</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Data modeling and dimensional schema design</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Streaming data processing with Kafka</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> dbt for data transformation and testing</div>
+      </div>
+      <div class="tags-row"><span class="tag">Intermediate</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Apache Airflow</span><span class="tag">Snowflake</span><span class="tag">Kafka</span><span class="tag">dbt</span></div>
+      <h3 style="margin-bottom:10px">Who Is This For?</h3>
+      <p>Developers, data analysts looking to move into engineering, and software professionals who want to build the data infrastructure that modern AI runs on.</p>
+      <div class="cd-footer">
+        <div class="cd-meta"><span><i class="fas fa-clock"></i> 12 Weeks</span><span><i class="fas fa-signal"></i> Intermediate</span><span><i class="fas fa-certificate"></i> Certificate</span></div>
+        <button class="btn-enroll" style="background:#16a34a" onclick="enrollNow('Data Engineering')"><i class="fas fa-graduation-cap"></i> Enroll Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-detail-card fade-up d4">
+    <div class="cd-header" style="background:linear-gradient(135deg,#4c1d95,#7c3aed)">
+      <div class="cd-icon"><i class="fas fa-server"></i></div>
+      <div><h2>Big Data — Hadoop, Spark &amp; Cloud-Scale Processing</h2><p>Process billions of records efficiently with enterprise-grade Big Data technologies trusted worldwide.</p></div>
+    </div>
+    <div class="cd-body">
+      <p>Big Data skills are critical for companies handling massive-scale data in banking, telecom, e-commerce, and government. This course equips you with the complete Big Data ecosystem.</p>
+      <h3 style="margin-bottom:14px">What You Will Learn</h3>
+      <div class="learn-grid">
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Hadoop ecosystem (HDFS, YARN, MapReduce)</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Apache Spark for large-scale data processing</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> PySpark for data engineering workflows</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Hive for SQL-based data warehousing</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Data lake architecture and management</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Cloud Big Data (AWS EMR, Databricks)</div>
+      </div>
+      <div class="tags-row"><span class="tag">Advanced</span><span class="tag">Hadoop</span><span class="tag">Apache Spark</span><span class="tag">PySpark</span><span class="tag">Hive</span><span class="tag">Databricks</span></div>
+      <h3 style="margin-bottom:10px">Who Is This For?</h3>
+      <p>Data engineers, developers, and IT professionals who need to work at enterprise scale — processing datasets too large for traditional tools.</p>
+      <div class="cd-footer">
+        <div class="cd-meta"><span><i class="fas fa-clock"></i> 10 Weeks</span><span><i class="fas fa-signal"></i> Advanced</span><span><i class="fas fa-certificate"></i> Certificate</span></div>
+        <button class="btn-enroll" style="background:#7c3aed" onclick="enrollNow('Big Data')"><i class="fas fa-graduation-cap"></i> Enroll Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-detail-card fade-up d5">
+    <div class="cd-header" style="background:linear-gradient(135deg,#7c2d12,#ea580c)">
+      <div class="cd-icon"><i class="fas fa-plug"></i></div>
+      <div><h2>Talend — ETL &amp; Data Integration Mastery</h2><p>Master Talend — the world's most powerful open-source data integration and ETL platform.</p></div>
+    </div>
+    <div class="cd-body">
+      <p>Talend is used by thousands of enterprises globally for ETL and data integration. This course makes you job-ready for data integration roles in banking, insurance, retail, healthcare, and more.</p>
+      <h3 style="margin-bottom:14px">What You Will Learn</h3>
+      <div class="learn-grid">
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Talend Open Studio fundamentals &amp; interface</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> ETL job design, optimization &amp; best practices</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Connecting to databases, APIs, flat files, and cloud sources</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Data quality validation and cleansing workflows</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Real-time and batch data integration patterns</div>
+        <div class="learn-item"><i class="fas fa-check-circle"></i> Enterprise deployment and scheduling strategies</div>
+      </div>
+      <div class="tags-row"><span class="tag">Intermediate</span><span class="tag">Talend Open Studio</span><span class="tag">ETL</span><span class="tag">SQL</span><span class="tag">Data Integration</span><span class="tag">Java basics</span></div>
+      <h3 style="margin-bottom:10px">Who Is This For?</h3>
+      <p>Data professionals, developers, and IT specialists who need to build robust data integration pipelines for enterprise systems.</p>
+      <div class="cd-footer">
+        <div class="cd-meta"><span><i class="fas fa-clock"></i> 8 Weeks</span><span><i class="fas fa-signal"></i> Intermediate</span><span><i class="fas fa-certificate"></i> Certificate</span></div>
+        <button class="btn-enroll" style="background:#ea580c" onclick="enrollNow('Talend')"><i class="fas fa-graduation-cap"></i> Enroll Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:52px 32px;background:linear-gradient(135deg,#0c3d8a,#0891b2);border-radius:var(--radius-lg);margin-top:16px">
+    <h2 style="font-family:'Sora',sans-serif;font-size:1.9rem;font-weight:800;color:#fff;margin-bottom:12px">Not Sure Which Course to Choose?</h2>
+    <p style="color:rgba(255,255,255,.8);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;font-size:1.02rem">Chat with our team on WhatsApp and we'll guide you to the perfect learning path for your goals, background, and timeline.</p>
+    <a href="https://wa.me/923077139942?text=Hi! I want to know which Datamend course is right for me." target="_blank" class="btn btn-white"><i class="fab fa-whatsapp"></i> Ask on WhatsApp</a>
+  </div>
+
+</div>
+</section>
+<footer style="background:var(--gray-900);color:rgba(255,255,255,.55);padding:32px 28px;text-align:center;font-size:.82rem">
+  © 2026 Datamend — Expertise that Delivers |
+  <button onclick="showPage('home')" style="background:none;border:none;color:#3b8ef0;cursor:pointer;font-size:.82rem">Home</button>
+</footer>
+</div><!-- /courses -->
+
+
+<!-- ═══════════════════════════════════════ JAVASCRIPT ═══════════════════════════════════════ -->
+<script>
+function showPage(id, clickedBtn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  if (clickedBtn) clickedBtn.classList.add('active');
+  window.scrollTo({top:0, behavior:'instant'});
+  if (id === 'blog') { closePosts(); }
+  setTimeout(activateFadeUps, 120);
 }
 
-// ─── NAVBAR ───────────────────────────────────────────────────────────────────
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+function toggleMobile() {
+  const nav = document.getElementById('mobileNav');
+  const btn = document.getElementById('hamburgerBtn');
+  const isOpen = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen);
+  nav.setAttribute('aria-hidden', !isOpen);
+  const spans = btn.querySelectorAll('span');
+  if (isOpen) {
+    spans[0].style.transform = 'rotate(45deg) translate(5px,5px)';
+    spans[1].style.opacity = '0';
+    spans[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
+  } else {
+    spans[0].style.transform = '';
+    spans[1].style.opacity = '';
+    spans[2].style.transform = '';
+  }
+}
+
+function closeMobile() {
+  const nav = document.getElementById('mobileNav');
+  const btn = document.getElementById('hamburgerBtn');
+  nav.classList.remove('open');
+  nav.setAttribute('aria-hidden', 'true');
+  if (btn) btn.setAttribute('aria-expanded', 'false');
+  const spans = btn.querySelectorAll('span');
+  spans[0].style.transform = '';
+  spans[1].style.opacity = '';
+  spans[2].style.transform = '';
+}
+
+document.addEventListener('click', (e) => {
+  const mn = document.getElementById('mobileNav');
+  const hamburger = document.querySelector('.hamburger');
+  if (mn && hamburger && !mn.contains(e.target) && !hamburger.contains(e.target)) {
+    mn.classList.remove('open');
+    mn.setAttribute('aria-hidden', 'true');
+  }
 });
 
-function toggleMenu() {
-  document.getElementById('navLinks').classList.toggle('open');
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeMobile();
+});
+
+function openPost(id) {
+  document.getElementById('blogListView').style.display = 'none';
+  document.getElementById('blogPostView').style.display = 'block';
+  document.querySelectorAll('.blog-post-content').forEach(p => p.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+  window.scrollTo({top:0, behavior:'instant'});
 }
 
-// ─── CONTACT FORM ─────────────────────────────────────────────────────────────
+function closePosts() {
+  document.getElementById('blogListView').style.display = 'block';
+  document.getElementById('blogPostView').style.display = 'none';
+}
+
+function filterBlog(btn, cat) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.blog-card').forEach(card => {
+    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'block' : 'none';
+  });
+}
+
 function submitForm() {
-  const name = document.getElementById('f-name').value.trim();
-  const email = document.getElementById('f-email').value.trim();
-  const msg = document.getElementById('f-message').value.trim();
+  const name = document.getElementById('cName').value.trim();
+  const email = document.getElementById('cEmail').value.trim();
+  const msg = document.getElementById('cMsg').value.trim();
   if (!name || !email || !msg) {
-    alert('Please fill in your name, email, and message.');
+    alert('Please fill in all required fields (Name, Email, Message).');
     return;
   }
-  document.getElementById('form-area').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
-}
-function resetForm() {
-  document.getElementById('f-name').value = '';
-  document.getElementById('f-email').value = '';
-  document.getElementById('f-subject').value = '';
-  document.getElementById('f-message').value = '';
-  document.getElementById('form-area').style.display = 'block';
-  document.getElementById('form-success').style.display = 'none';
+  document.getElementById('successMsg').classList.add('show');
+  document.getElementById('cName').value = '';
+  document.getElementById('cEmail').value = '';
+  document.getElementById('cMsg').value = '';
+  setTimeout(() => document.getElementById('successMsg').classList.remove('show'), 6000);
 }
 
-// ─── SCROLL ANIMATIONS ────────────────────────────────────────────────────────
-function initObserver() {
-  const els = document.querySelectorAll('.fade-in:not(.visible), .fade-left:not(.visible), .fade-right:not(.visible)');
+function enrollNow(course) {
+  const msg = encodeURIComponent(`Hi Datamend! I'd like to enroll in the "${course}" course. Please share the enrollment details and fees.`);
+  window.open(`https://wa.me/923077139942?text=${msg}`, '_blank');
+}
+
+function activateFadeUps() {
+  const els = document.querySelectorAll('.page.active .fade-up:not(.in)');
   if (!els.length) return;
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  els.forEach(el => obs.observe(el));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.12});
+  els.forEach(el => observer.observe(el));
 }
 
-document.addEventListener('DOMContentLoaded', () => { initObserver(); });
+window.addEventListener('load', () => {
+  setTimeout(activateFadeUps, 200);
+  window.addEventListener('scroll', () => {
+    document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 10);
+  }, {passive:true});
+});
+
+window.addEventListener('scroll', activateFadeUps, {passive: true});
+
+document.querySelectorAll('.nav-links > li').forEach(li => {
+  const btn = li.querySelector('.nav-btn');
+  const dropdown = li.querySelector('.dropdown');
+  if (!dropdown) return;
+  btn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      const open = dropdown.style.visibility === 'visible';
+      dropdown.style.visibility = open ? '' : 'visible';
+      dropdown.style.opacity = open ? '' : '1';
+      dropdown.style.pointerEvents = open ? '' : 'all';
+      btn.setAttribute('aria-expanded', !open);
+    }
+    if (e.key === 'Escape') {
+      dropdown.style.visibility = '';
+      dropdown.style.opacity = '';
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
 </script>
 </body>
 </html>
